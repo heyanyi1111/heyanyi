@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Plus自助充值系统-安全便捷的官方充值系统</title>
+    <meta name="description" content="ChatGPT Plus自助代充系统，正规渠道，安全无风险，20秒快速充值，立即生效，低汇率充值，价格更优惠，无需国外信用卡，操作简单">
+    <meta name="keywords" content="ChatGPT官网充值,ChatGPT Plus官网充值,chatgpt plus代充,chatgpt 代充,ChatGPT代充系统,OpenAI代充系统">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #10a37f; /* 改为青绿色主色调 */
+            --secondary: #0d8c6d; /* 深一点的青绿 */
+            --accent: #12b886; /* 亮一点的青绿 */
+            --light: #ffffff;
+            --dark: #0f172a;
+            --light-bg: #f8fdfb; /* 淡青绿色背景 */
+            --text: #1e293b;
+            --text-light: #64748b;
+            --success: #10a37f; /* 统一为青绿色 */
+            --warning: #f59e0b;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border: #e2f2ec; /* 青绿色边框 */
+            --container-width: 1200px;
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏样式 */
+        header {
+            padding: 40px 0 25px;
+            text-align: center;
+            background: linear-gradient(135deg, #e8f5f0, #dcefe8);
+            border-radius: 0 0 25px 25px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #10a37f, #12b886);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-login {
+            background: transparent;
+            border: 2px solid var(--border);
+            color: var(--text);
+        }
+
+        .btn-login:hover {
+            background: rgba(16, 163, 127, 0.05);
+            border-color: var(--primary);
+        }
+
+        .btn-register {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(16, 163, 127, 0.25);
+        }
+
+        .btn-register:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 163, 127, 0.35);
+        }
+
+        .hero {
+            padding: 45px 0 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #d8f0e8, #cae9df);
+            border-radius: 0;
+            margin-bottom: 45px;
+        }
+
+        .hero-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            line-height: 1.2;
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            color: var(--text-light);
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .btn-primary {
+            background: var(--success);
+            color: white;
+            padding: 14px 32px;
+            font-size: 1.05rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(16, 163, 127, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(16, 163, 127, 0.4);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            background: white;
+            padding: 5px 3px; /* 增加内边距，让内容有足够空间 */
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin: 12px auto 0;
+            max-width: 680px;
+            /* 移除固定高度，让内容自适应 */
+            min-height: auto; /* 确保最小高度自适应 */
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 8px 18px;
+        }
+
+        .stat-item h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--primary);
+        }
+
+        .stat-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* 内容区域样式 */
+        .section {
+            padding: 5px 0;
+        }
+
+        .section-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 16px auto 0;
+            color: var(--text-light);
+        }
+
+        /* 步骤卡片 */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .step-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+            color: var(--secondary);
+        }
+
+        .step-card p {
+            color: var(--text-light);
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .step-link {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .step-link:hover {
+            color: var(--secondary);
+        }
+
+        .step-link i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .step-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* 注意事项 */
+        .note-box {
+            background: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 22px;
+            border-radius: var(--radius);
+            margin: 28px 0;
+        }
+
+        .note-box h4 {
+            color: #e65100;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1rem;
+        }
+
+        .note-list {
+            list-style: none;
+        }
+
+        .note-list li {
+            padding: 7px 0;
+            position: relative;
+            padding-left: 22px;
+            font-size: 0.95rem;
+        }
+
+        .note-list li::before {
+            content: '•';
+            color: var(--warning);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 7px;
+        }
+
+        /* 用户反馈 */
+        .testimonials {
+            background: white;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            margin-top: 35px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .testimonial-card {
+            background: var(--light-bg);
+            border-radius: 14px;
+            padding: 22px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .user-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-right: 14px;
+        }
+
+        .user-info h4 {
+            color: var(--secondary);
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+
+        .user-info p {
+            color: var(--text-light);
+            font-size: 0.88rem;
+        }
+
+        .testimonial-content {
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+        }
+
+        .video-section {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            margin-top: 18px;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .play-button {
+            width: 75px;
+            height: 75px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .play-button i {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        /* 客服区域 */
+        .contact-section {
+            background: linear-gradient(135deg, #e8f5f0, #dcefe8);
+            border-radius: 16px;
+            padding: 35px;
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 35px;
+            margin-top: 28px;
+        }
+
+        .contact-info {
+            max-width: 480px;
+            text-align: left;
+        }
+
+        .contact-info h3 {
+            font-size: 1.6rem;
+            color: var(--secondary);
+            margin-bottom: 18px;
+        }
+
+        .contact-info p {
+            margin-bottom: 14px;
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .contact-info .highlight {
+            display: inline-block;
+            background: rgba(16, 163, 127, 0.1);
+            padding: 4px 14px;
+            border-radius: 30px;
+            color: var(--primary);
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .qrcode {
+            background: white;
+            padding: 14px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .qrcode img {
+            width: 170px;
+            height: auto;
+            display: block;
+        }
+
+        .qrcode p {
+            margin-top: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            font-size: 0.95rem;
+        }
+
+        /* 底部区域样式 */
+        footer {
+            background: linear-gradient(135deg, #e8f5f0, #dcefe8);
+            color: var(--secondary);
+            padding: 50px 0 25px;
+            margin-top: 45px;
+        }
+
+        .footer-about {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .footer-about h3 {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            color: var(--secondary);
+        }
+
+        .footer-about p {
+            color: var(--text);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 28px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--text);
+            font-size: 0.88rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 28px 20px 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 55px 0 30px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-stats {
+                gap: 12px;
+            }
+
+            .stat-item h3 {
+                font-size: 1.6rem;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+
+            .testimonials {
+                padding: 25px;
+            }
+
+            .video-section {
+                padding: 20px;
+            }
+        }
+
+        /* 动画效果 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 163, 127, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(16, 163, 127, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 163, 127, 0); }
+        }
+    </style>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?59033874dd991ce9246775fed052092a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<!-- 导航栏 -->
+
+
+<!-- 主内容区域 -->
+<main>
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ChatGPT Plus自助充值系统</h1>
+            <p>正规渠道，安全无风险，30秒快速充值，无需国外信用卡，充值不成功全额退款!</p>
+            <div class="cta-buttons">
+                <a href="https://qf.dtyuedan.cn/shop/codes" class="btn btn-register" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-shopping-cart"></i> 购买卡密
+                </a>
+                <a id="rechargeLinkBtn" href="#" class="btn btn-register" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-key"></i> 立即充值
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>50,000+</h3>
+                    <p>成功充值用户</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.99%</h3>
+                    <p>充值成功率</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30秒</h3>
+                    <p>平均到账时间</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 充值流程 -->
+    <section class="section">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>简单四步完成充值</h2>
+                <p>全自助操作，安全可靠，专业ChatGPT Plus代充服务，极速到账。</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>购买卡密</h3>
+                    <p>选择ChatGPT官网充值</p>
+                    <a href="https://qf.dtyuedan.cn/shop/codes" class="step-link" target="_blank">
+                        立即购买 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>访问充值网站</h3>
+                    <p>打开充值平台，输入卡密</p>
+                    <a id="rechargeLinkStep" href="#"  class="step-link" target="_blank">
+                        前往充值 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>登录账号验证</h3>
+                    <p>登录您的ChatGPT账号，获取充值密钥，请确保登录的是您自己的账号</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>完成充值</h3>
+                    <p>复制验证密钥，完成充值，立即享受Plus服务</p>
+                </div>
+            </div>
+
+            <!-- 注意事项 -->
+            <div class="note-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> 重要注意事项</h4>
+                <ul class="note-list">
+                    <li>不能给已经是ChatGPT会员的账号充值，请等待当前会员过期后再充值</li>
+                    <li>充值获取秘钥时需要登录自己的ChatGPT账号</li>
+                    <li>返回的秘钥需要全选复制全部内容，包括大括号{}的文本</li>
+                    <li>无需取消自动续费，下次过期再购买秘钥充值即可</li>
+                    <li>不能开ChatGPT官网的发票，需要开票请提前联系客服</li>
+                    <li>如果支付失败，请复制购买地址到浏览器，用微信扫码支付</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户反馈 -->
+    <section class="section">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>用户真实反馈</h2>
+                <p>
+                    <a href="https://ja2t57ja0d.feishu.cn/wiki/KipEwMw3AidnexkCu9dch3Kznjb" target="_blank" rel="noopener noreferrer">
+                        查看更多用户充值反馈
+                    </a>
+                </p>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">六</div>
+                            <div class="user-info">
+                                <h4>六六</h4>
+                                <p>2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            "整个充值过程非常顺利，按照教程操作一分钟就完成了。最满意的是不需要提供账号密码，安全放心！"
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">z</div>
+                            <div class="user-info">
+                                <h4>zackroo</h4>
+                                <p>2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            "之前担心自助充值会很复杂，实际跟着步骤一步步操作非常清晰。客服回复也很及时，解决了我的疑问。"
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">K</div>
+                            <div class="user-info">
+                                <h4>Kyle</h4>
+                                <p>2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            "作为技术人员，很欣赏这种全自助的充值方案。安全透明，没有中间环节，充值后立即生效，非常高效！"
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">X</div>
+                            <div class="user-info">
+                                <h4>XXT</h4>
+                                <p>2025-07-14 充值成功</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            "第一次使用就成功了，操作界面很友好，一步一步操作就行，而且到账速度真的很快，强烈推荐！"
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">七</div>
+                            <div class="user-info">
+                                <h4>七安</h4>
+                                <p>2025-07-13 充值成功</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            "对比了好几家，这家最靠谱。不需要国外信用卡，还可以帮你充值。已经推荐给同事使用了，服务确实不错。"
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="user-avatar">S</div>
+                            <div class="user-info">
+                                <h4>Sarah</h4>
+                                <p>2025-07-12 充值成功</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            "半夜充值也秒到账，太惊喜了！客服半夜也在线，有问题随时解答。这种服务体验真的很棒，会长期使用。"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 视频教程 -->
+    <section class="section">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>视频教程</h2>
+                <p>观看操作指南即可自助充值（录制时为GPT-4，现在升级就是GPT-5，请放心下单）</p>
+            </div>
+
+            <div class="video-section">
+                <div class="video-container">
+                    <video id="tutorialVideo" poster="https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WechatIMG1540.jpg" controls>
+                        <source id="videoSource" src="#" type="video/mp4">
+                        您的浏览器不支持播放此视频，请点击<a id="videoFallback" href="#" >这里</a>观看。
+                    </video>
+                    <div class="video-overlay" id="playOverlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 20px; color: var(--text-light);">
+                    点击播放按钮查看详细充值教程
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客服联系区域 -->
+    <section class="section">
+        <div class="section-content">
+            <div class="contact-section">
+                <div class="section-title">
+                    <h2>联系客服</h2>
+                    <p>ChatGPT Plus充值遇到问题？联系客服获取帮助</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>客服支持</h3>
+                        <p>ChatGPT Plus充值过程中遇到任何问题，都可以添加客服微信获取帮助</p>
+                        <p>微信号：<span class="highlight">lchhlp</span></p>
+                        <p>📝 添加时请备注: <strong>gpt</strong></p>
+                        <p style="margin-top: 20px; font-size: 0.95rem;">
+                            客服在线时间：9:00 - 24:00（全年无休）
+                        </p>
+                    </div>
+
+                    <div class="qrcode">
+                        <img src="https://hlplch.aliyuntm.com/chatgpt/WX20240227-105234.png" alt="客服微信二维码">
+                        <p>扫码添加客服微信</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 底部区域 -->
+<footer>
+    <div class="container">
+        <div class="footer-about">
+            <h3>关于我们</h3>
+            <p>我们专注于提供安全可靠的ChatGPT Plus自助充值服务，已帮助数万用户解决充值难题，通过IOS渠道进行充值，确保账号安全无忧。</p>
+        </div>
+        <div class="copyright">
+            <p>© 2025 ChatGPT Plus自助充值系统 版权所有 | 安全可靠的自助充值系统</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 视频播放功能
+    const videoPlayer = document.getElementById('tutorialVideo');
+    const playOverlay = document.getElementById('playOverlay');
+
+    playOverlay.addEventListener('click', function() {
+        videoPlayer.play();
+        playOverlay.style.display = 'none';
+    });
+
+    videoPlayer.addEventListener('play', function() {
+        playOverlay.style.display = 'none';
+    });
+
+    videoPlayer.addEventListener('pause', function() {
+        playOverlay.style.display = 'flex';
+    });
+
+    // 滚动动画效果
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // 为需要动画的元素添加观察
+        document.querySelectorAll('.step-card, .testimonial-card').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    });
+</script>
+
+<script>
+    // 配置变量（你可以根据需要动态获取，例如通过后端渲染、cookie、URL参数等）
+    // const configValue = 'A';  // 设为 A 或 B
+    const configValue = 'A';  // 设为 A 或 B
+
+    // URL 对应关系
+    const linkMap = {
+        A: {
+            rechargeUrl: 'https://gptplus.biz/',
+            videoUrl: 'http://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/514196921671.mp4'
+        },
+        B: {
+            rechargeUrl: 'https://9977ai.vip/',
+            videoUrl: 'https://9977ai.vip/9977%E6%95%99%E7%A8%8B.mp4'
+        }
+    };
+
+    // 获取对应链接
+    const selected = linkMap[configValue];
+
+    // 替换链接和视频地址
+    document.getElementById('rechargeLinkStep').href = selected.rechargeUrl;
+    document.getElementById('rechargeLinkBtn').href = selected.rechargeUrl;
+
+    document.getElementById('videoSource').src = selected.videoUrl;
+    document.getElementById('videoFallback').href = selected.videoUrl;
+
+    // 重新加载 video 元素
+    document.getElementById('tutorialVideo').load();
+</script>
+</body>
+</html>
