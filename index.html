@@ -759,11 +759,12 @@
             <h1>ChatGPT Plus自助充值系统</h1>
             <p>正规渠道，安全无风险，30秒快速充值，无需国外信用卡，充值不成功全额退款!</p>
             <div class="cta-buttons">
-                <div class="wechat-section">
-                    <button class="btn btn-register">
-                        <i class="fab fa-weixin"></i> 加微信号：lchhlp 或者扫网站底部的二维码添加客服人工充值，有优惠...
-                    </button>
-                </div>
+                <a href="https://qf.dtyuedan.cn/shop/codes" class="btn btn-register" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-shopping-cart"></i> 购买卡密
+                </a>
+                <a id="rechargeLinkBtn" href="#" class="btn btn-register" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-key"></i> 立即充值
+                </a>
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -793,29 +794,32 @@
             <div class="steps-container">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>登录ChatGPT</h3>
-                    <p>电脑浏览器登录你自己的ChatGPT账号</p>
+                    <h3>购买卡密</h3>
+                    <p>选择ChatGPT官网充值</p>
+                    <a href="https://qf.dtyuedan.cn/shop/codes" class="step-link" target="_blank">
+                        立即购买 <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3>获取ChatGPT账号json文本</h3>
-                    <p>浏览器新打开个网页输入如下地址</p>
-                    <a href="https://chatgpt.com/api/auth/session" class="step-link" target="_blank">
-                        https://chatgpt.com/api/auth/session <i class="fas fa-arrow-right"></i>
+                    <h3>访问充值网站</h3>
+                    <p>打开充值平台，输入卡密</p>
+                    <a id="rechargeLinkStep" href="#"  class="step-link" target="_blank">
+                        前往充值 <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3>全选复制账json文本</h3>
-                    <p>把浏览器复制的json文本全选复制，然后发给客服就行</p>
+                    <h3>登录账号验证</h3>
+                    <p>登录您的ChatGPT账号，获取充值密钥，请确保登录的是您自己的账号</p>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">4</div>
                     <h3>完成充值</h3>
-                    <p>完成充值，立即享受Plus服务</p>
+                    <p>复制验证密钥，完成充值，立即享受Plus服务</p>
                 </div>
             </div>
 
@@ -930,6 +934,32 @@
         </div>
     </section>
 
+    <!-- 视频教程 -->
+    <section class="section">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>视频教程</h2>
+                <p>观看操作指南即可自助充值（录制时为GPT-4，现在升级就是GPT-5，请放心下单）</p>
+            </div>
+
+            <div class="video-section">
+                <div class="video-container">
+                    <video id="tutorialVideo" poster="https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WechatIMG1540.jpg" controls>
+                        <source id="videoSource" src="#" type="video/mp4">
+                        您的浏览器不支持播放此视频，请点击<a id="videoFallback" href="#" >这里</a>观看。
+                    </video>
+                    <div class="video-overlay" id="playOverlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 20px; color: var(--text-light);">
+                    点击播放按钮查看详细充值教程
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- 客服联系区域 -->
     <section class="section">
@@ -943,7 +973,7 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>客服支持</h3>
-                        <p>ChatGPT Plus充值任何问题，都可以添加客服微信获取帮助</p>
+                        <p>ChatGPT Plus充值过程中遇到任何问题，都可以添加客服微信获取帮助</p>
                         <p>微信号：<span class="highlight">lchhlp</span></p>
                         <p>📝 添加时请备注: <strong>gpt</strong></p>
                         <p style="margin-top: 20px; font-size: 0.95rem;">
