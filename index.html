@@ -3,54 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Plus 代充系统 - 官方代充服务</title>
-    <meta name="description" content="ChatGPT Plus自助充值系统，正规渠道，安全无风险，20秒快速充值，立即生效。">
+    <title>ChatGPT Plus 官方代充 - 安全高效的升级方案</title>
+    <meta name="description" content="ChatGPT Plus自助充值系统，正规渠道，安全无风险，30秒快速充值，立即生效。">
     <meta name="keywords" content="ChatGPT代充,ChatGPT充值, GPT5, OpenAI, Plus会员, 自助充值">
     
-    <!-- 引入 Tailwind CSS (极速构建现代UI) -->
+    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 引入 FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 引入 Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- 引入 Inter 字体 (最适合 UI 的字体) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script>
-        // 配置 Tailwind 主题色
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
-                            DEFAULT: '#10a37f',
-                            glow: '#00ffcc',
-                            dark: '#0d8c6d'
+                            500: '#10a37f', // OpenAI Green
+                            600: '#0d8c6d', // Hover Green
+                            50: '#f0fdf4',  // Light Green BG
                         },
-                        dark: {
-                            bg: '#0b0f19',
-                            card: '#121826',
-                            border: '#1f2937'
+                        slate: {
+                            850: '#1e293b', // Darker Slate
                         }
                     },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
+                    boxShadow: {
+                        'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                        'float': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
                     }
                 }
             }
@@ -58,47 +41,36 @@
     </script>
 
     <style>
-        /* 自定义一些特殊效果 */
         body {
-            background-color: #0b0f19;
-            color: #e2e8f0;
-            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #0f172a;
+            /* 添加细腻的网格背景，增加质感 */
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
         }
         
-        .glass-nav {
-            background: rgba(11, 15, 25, 0.7);
+        /* 导航栏模糊 */
+        .backdrop-blur-md {
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .text-gradient {
-            background: linear-gradient(to right, #10a37f, #2dd4bf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* 隐藏滚动条但保留功能 */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-
-        .card-gradient {
-            background: linear-gradient(145deg, #121826 0%, #0f131f 100%);
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
         }
-
-        .glow-on-hover:hover {
-            box-shadow: 0 0 20px rgba(16, 163, 127, 0.4);
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
         }
-
-        /* 视频播放按钮的波纹 */
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            animation: ripple 2s infinite;
-            background: rgba(16, 163, 127, 0.4);
-        }
-        @keyframes ripple {
-            0% { transform: scale(1); opacity: 0.8; }
-            100% { transform: scale(2); opacity: 0; }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
         }
     </style>
-
+    
     <!-- 百度统计 -->
     <script>
         var _hmt = _hmt || [];
@@ -110,316 +82,301 @@
         })();
     </script>
 </head>
-<body class="antialiased relative">
-
-    <!-- 背景动态光斑 -->
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-DEFAULT rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob"></div>
-        <div class="absolute top-0 right-1/4 w-96 h-96 bg-purple-700 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000"></div>
-        <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-blue-700 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-4000"></div>
-    </div>
+<body class="antialiased">
 
     <!-- 导航栏 -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-brand-DEFAULT to-teal-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-DEFAULT/20">
-                        <i class="fas fa-bolt text-white text-xl"></i>
-                    </div>
-                    <span class="font-bold text-xl tracking-tight text-white">Turbo<span class="text-brand-DEFAULT">GPT</span></span>
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 bg-white/80 backdrop-blur-md">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
+                <div class="bg-brand-500 text-white w-8 h-8 rounded-md flex items-center justify-center">
+                    <i class="fas fa-cube"></i>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#process" class="hover:text-brand-DEFAULT transition-colors px-3 py-2 rounded-md text-sm font-medium">充值流程</a>
-                        <a href="#video" class="hover:text-brand-DEFAULT transition-colors px-3 py-2 rounded-md text-sm font-medium">视频教程</a>
-                        <a href="#reviews" class="hover:text-brand-DEFAULT transition-colors px-3 py-2 rounded-md text-sm font-medium">用户反馈</a>
-                        <a href="#contact" class="hover:text-brand-DEFAULT transition-colors px-3 py-2 rounded-md text-sm font-medium">联系客服</a>
-                    </div>
-                </div>
-                <div>
-                    <a href="https://qf.dtyuedan.cn/shop/codes" target="_blank" class="bg-white text-black px-5 py-2.5 rounded-full font-bold text-sm hover:bg-brand-glow hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                        购买卡密
-                    </a>
-                </div>
+                <span class="self-center text-xl font-bold whitespace-nowrap text-gray-900 tracking-tight">Turbo <span class="text-brand-500">GPT</span></span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="https://qf.dtyuedan.cn/shop/codes" target="_blank" class="text-white bg-gray-900 hover:bg-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors shadow-subtle">
+                    购买卡密
+                </a>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                    <li>
+                        <a href="#process" class="block py-2 px-3 text-gray-600 hover:text-brand-500 transition-colors">充值流程</a>
+                    </li>
+                    <li>
+                        <a href="#video" class="block py-2 px-3 text-gray-600 hover:text-brand-500 transition-colors">视频教程</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="block py-2 px-3 text-gray-600 hover:text-brand-500 transition-colors">联系客服</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero 区域 -->
-    <main class="relative z-10 pt-32 pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-float">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                <span class="text-xs font-mono text-gray-300">系统状态：GPT-5 Ready / 极速通道畅通</span>
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-b from-white to-gray-50/50">
+        <div class="px-4 mx-auto max-w-7xl text-center">
+            <!-- 徽章 -->
+            <div class="inline-flex items-center justify-between px-1 py-1 pr-4 mb-8 text-sm text-gray-700 bg-white border border-gray-200 rounded-full shadow-sm hover:bg-gray-50 transition-colors cursor-default">
+                <span class="text-xs bg-brand-50 text-brand-500 rounded-full px-3 py-1.5 font-bold mr-3 border border-brand-500/20">New</span> 
+                <span class="text-sm font-medium">GPT-5.1 模型已全面支持</span>
+                <i class="fas fa-chevron-right ml-2 text-gray-400 text-xs"></i>
             </div>
             
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                解锁 AI 的 <br>
-                <span class="text-gradient">无限潜能</span>
+            <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-6xl lg:text-7xl">
+                升级您的 <span class="text-brand-500">AI 生产力</span>
             </h1>
-            
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
-                官方正规渠道，无需海外信用卡。全自动化充值系统，<span class="text-white font-semibold border-b border-brand-DEFAULT">30秒极速到账</span>，安全无风险。
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 leading-relaxed">
+                官方正规渠道，安全稳定。无需海外信用卡，全自动发货。<br>
+                已有 <span class="font-bold text-gray-900 border-b-2 border-brand-500/30">50,000+</span> 用户通过我们成功升级 Plus 会员。
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-                <a href="https://qf.dtyuedan.cn/shop/codes" target="_blank" class="group relative px-8 py-4 bg-brand-DEFAULT rounded-full text-white font-bold text-lg overflow-hidden glow-on-hover transition-all">
-                    <div class="absolute inset-0 w-full h-full bg-white/20 group-hover:translate-x-full transition-transform duration-500 -translate-x-full transform skew-x-12"></div>
-                    <i class="fas fa-shopping-cart mr-2"></i> 购买卡密
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="https://qf.dtyuedan.cn/shop/codes" target="_blank" class="inline-flex justify-center items-center py-3.5 px-8 text-base font-semibold text-center text-white rounded-lg bg-brand-500 hover:bg-brand-600 focus:ring-4 focus:ring-brand-500/30 transition-all shadow-lg shadow-brand-500/20 hover:-translate-y-1">
+                    立即购买卡密
+                    <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                <a id="rechargeLinkBtn" href="#" target="_blank" class="px-8 py-4 rounded-full border border-gray-600 text-white font-bold text-lg hover:border-brand-DEFAULT hover:text-brand-DEFAULT transition-colors bg-white/5 backdrop-blur-sm">
-                    <i class="fas fa-rocket mr-2"></i> 立即充值
+                <a id="rechargeLinkBtn" href="#" target="_blank" class="inline-flex justify-center items-center py-3.5 px-8 text-base font-semibold text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-50 hover:border-gray-400 focus:ring-4 focus:ring-gray-100 transition-all bg-white shadow-subtle">
+                    <i class="fas fa-bolt mr-2 text-gray-500"></i>
+                    前往充值中心
                 </a>
-            </div>
-
-            <!-- 数据统计面板 -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-b border-white/10 py-8">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-white mb-1">50k+</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">服务用户</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-brand-DEFAULT mb-1">100%</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">充值成功率</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-white mb-1">30s</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">平均耗时</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-blue-400 mb-1">24/7</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">全天候支持</div>
-                </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- 流程部分 (Bento Grid 风格) -->
-    <section id="process" class="py-20 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 流程步骤 (卡片风格) -->
+    <section id="process" class="py-20 bg-white">
+        <div class="px-4 mx-auto max-w-7xl">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">极简充值流程</h2>
-                <p class="text-gray-400">告别繁琐的验证，四步即可享受 Plus 会员</p>
+                <h2 class="mb-4 text-3xl font-bold tracking-tight text-gray-900">简单四步，即刻启用</h2>
+                <p class="text-gray-500 sm:text-xl">全流程自动化，无需人工干预，24小时随时可用</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-4">
                 <!-- Step 1 -->
-                <div class="group card-gradient p-8 rounded-3xl border border-dark-border hover:border-brand-DEFAULT/50 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-ticket-alt text-8xl text-brand-DEFAULT"></i>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-float transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-50 transition-colors">
+                        <i class="fas fa-shopping-bag text-xl text-gray-700 group-hover:text-brand-500"></i>
                     </div>
-                    <div class="w-12 h-12 bg-brand-DEFAULT/10 rounded-xl flex items-center justify-center mb-6 text-brand-DEFAULT font-bold text-xl">1</div>
-                    <h3 class="text-xl font-bold text-white mb-3">购买卡密</h3>
-                    <p class="text-gray-400 text-sm mb-6">选择ChatGPT官网充值商品，下单获取专属兑换码。</p>
-                    <a href="https://qf.dtyuedan.cn/shop/codes" target="_blank" class="text-brand-DEFAULT text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                        去购买 <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">1. 购买卡密</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                        在发卡网下单购买 ChatGPT Plus 充值兑换码。
+                    </p>
+                    <a href="https://qf.dtyuedan.cn/shop/codes" target="_blank" class="text-brand-500 font-semibold text-sm hover:underline">去购买 &rarr;</a>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="group card-gradient p-8 rounded-3xl border border-dark-border hover:border-brand-DEFAULT/50 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-desktop text-8xl text-blue-500"></i>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-float transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-desktop text-xl text-gray-700 group-hover:text-blue-600"></i>
                     </div>
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-500 font-bold text-xl">2</div>
-                    <h3 class="text-xl font-bold text-white mb-3">进入平台</h3>
-                    <p class="text-gray-400 text-sm mb-6">打开专属充值平台，输入您购买到的卡密。</p>
-                    <a id="rechargeLinkStep" href="#" target="_blank" class="text-blue-400 text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                        去充值 <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">2. 打开平台</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                        进入专属充值页面，填入您的卡密。
+                    </p>
+                    <a id="rechargeLinkStep" href="#" target="_blank" class="text-blue-600 font-semibold text-sm hover:underline">去充值 &rarr;</a>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="group card-gradient p-8 rounded-3xl border border-dark-border hover:border-brand-DEFAULT/50 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-user-shield text-8xl text-purple-500"></i>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-float transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-50 transition-colors">
+                        <i class="fas fa-user-check text-xl text-gray-700 group-hover:text-purple-600"></i>
                     </div>
-                    <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-500 font-bold text-xl">3</div>
-                    <h3 class="text-xl font-bold text-white mb-3">验证账号</h3>
-                    <p class="text-gray-400 text-sm mb-6">登录您自己的ChatGPT账号，系统自动获取充值密钥。</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">3. 登录验证</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        登录您自己的 ChatGPT 账号，系统自动获取 Key。
+                    </p>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="group card-gradient p-8 rounded-3xl border border-dark-border hover:border-brand-DEFAULT/50 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-check-circle text-8xl text-green-400"></i>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-float transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-50 transition-colors">
+                        <i class="fas fa-check-circle text-xl text-gray-700 group-hover:text-green-600"></i>
                     </div>
-                    <div class="w-12 h-12 bg-green-400/10 rounded-xl flex items-center justify-center mb-6 text-green-400 font-bold text-xl">4</div>
-                    <h3 class="text-xl font-bold text-white mb-3">充值完成</h3>
-                    <p class="text-gray-400 text-sm mb-6">复制返回的密钥，确认后立即激活服务。</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">4. 确认到账</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        复制密钥并确认，Plus 会员权益立即生效。
+                    </p>
                 </div>
             </div>
-            
-            <!-- 注意事项 (代码块风格) -->
-            <div class="mt-12 bg-black/30 border border-yellow-500/30 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-                <div class="flex items-start gap-4">
-                    <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
-                    <div>
-                        <h4 class="text-yellow-500 font-bold mb-4">重要注意事项 (READ ME)</h4>
-                        <ul class="space-y-2 font-mono text-sm text-gray-400">
-                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 请确保账号当前未开通 Plus 或会员已过期。</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 充值过程需登录您自己的账号获取密钥。</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 复制密钥时请包含所有大括号 {} 内容。</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 支付失败？请尝试使用微信扫码支付。</li>
-                        </ul>
-                    </div>
+
+            <!-- 警告框 -->
+            <div class="bg-orange-50 border border-orange-100 rounded-xl p-6 flex flex-col md:flex-row items-start gap-4">
+                <div class="p-2 bg-orange-100 rounded-full text-orange-600 shrink-0">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-2">充值前必读</h4>
+                    <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside marker:text-orange-400">
+                        <li>仅支持当前未开通 Plus 或会员已过期的账号。</li>
+                        <li>如遇支付问题，请复制链接到浏览器使用微信扫码支付。</li>
+                        <li>充值过程安全无忧，全程无需提供账号密码。</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 视频展示区 (Macbook 风格框架) -->
-    <section id="video" class="py-20 bg-white/5 relative z-10">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white">1分钟上手教程</h2>
-                <p class="text-gray-400 mt-2">GPT-5 Ready，操作从未如此简单</p>
+    <!-- 视频教程 (简约边框风格) -->
+    <section id="video" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="px-4 mx-auto max-w-5xl text-center">
+            <div class="mb-10">
+                <span class="text-brand-500 font-bold tracking-wide text-sm uppercase">Video Tutorial</span>
+                <h2 class="mt-2 text-3xl font-bold text-gray-900">1分钟操作演示</h2>
             </div>
             
-            <div class="relative mx-auto bg-gray-800 rounded-t-2xl border-4 border-gray-700 shadow-2xl" style="aspect-ratio: 16/9;">
-                <!-- 屏幕区域 -->
-                <div class="absolute inset-0 bg-black rounded-t-lg overflow-hidden group">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-white">
+                <div class="aspect-w-16 aspect-h-9 relative bg-black group cursor-pointer" onclick="togglePlay()">
                     <video id="tutorialVideo" class="w-full h-full object-contain" poster="https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WechatIMG1540.jpg">
                         <source id="videoSource" src="#" type="video/mp4">
-                        您的浏览器不支持播放。
+                        您的浏览器不支持播放此视频。
                     </video>
-                    <!-- 播放遮罩 -->
-                    <div id="playOverlay" class="absolute inset-0 flex items-center justify-center bg-black/60 cursor-pointer group-hover:bg-black/40 transition-all">
-                        <div class="relative">
-                            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center z-10 relative shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-transform group-hover:scale-110">
-                                <i class="fas fa-play text-brand-DEFAULT text-2xl ml-1"></i>
-                            </div>
-                            <div class="ripple w-20 h-20 top-0 left-0"></div>
+                    <!-- 播放按钮 -->
+                    <div id="playOverlay" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-all z-10">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg transition-transform transform group-hover:scale-110">
+                            <i class="fas fa-play text-brand-500 text-2xl pl-1"></i>
                         </div>
                     </div>
                 </div>
+                <div class="bg-white py-4 px-6 text-left flex justify-between items-center border-t border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                        <span class="text-sm font-medium text-gray-600">Live Demo</span>
+                    </div>
+                    <span class="text-sm text-gray-400">GPT Upgrade</span>
+                </div>
             </div>
-            <!-- 底座 -->
-            <div class="h-4 bg-gray-700 rounded-b-xl mx-auto w-full max-w-[98%] shadow-lg relative z-20"></div>
         </div>
     </section>
 
-    <!-- 用户反馈 -->
-    <section id="reviews" class="py-20 relative z-10">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- 评价 -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="px-4 mx-auto max-w-7xl">
             <div class="flex justify-between items-end mb-12">
                 <div>
-                    <h2 class="text-3xl font-bold text-white">极客评价</h2>
-                    <p class="text-gray-400 mt-2">来自真实开发者与创作者的声音</p>
+                    <h2 class="text-3xl font-bold text-gray-900">用户评价</h2>
+                    <p class="text-gray-500 mt-2">看看其他人怎么说</p>
                 </div>
-                <a href="https://ja2t57ja0d.feishu.cn/wiki/KipEwMw3AidnexkCu9dch3Kznjb" target="_blank" class="hidden md:inline-flex items-center gap-2 text-brand-DEFAULT hover:text-white transition-colors text-sm">
-                    查看更多 <i class="fas fa-external-link-alt"></i>
+                <a href="https://ja2t57ja0d.feishu.cn/wiki/KipEwMw3AidnexkCu9dch3Kznjb" target="_blank" class="text-sm font-semibold text-brand-500 hover:text-brand-600 hover:underline">
+                    查看更多反馈 &rarr;
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Review 1 -->
-                <div class="card-gradient p-6 rounded-2xl border border-dark-border">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold">Z</div>
+            <div class="grid gap-8 md:grid-cols-3">
+                <!-- Review Card -->
+                <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-bold text-gray-600">Z</div>
                         <div>
-                            <div class="text-white font-bold">Zackroo</div>
-                            <div class="text-xs text-gray-500">2025-07-15 | 充值成功</div>
+                            <div class="font-bold text-gray-900">Zackroo</div>
+                            <div class="text-xs text-gray-400">2025-07-15</div>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-300 text-sm leading-relaxed">"作为技术人员，很欣赏这种全自助的充值方案。安全透明，没有中间环节，充值后立即生效，非常高效！"</p>
-                </div>
-                
-                <!-- Review 2 -->
-                <div class="card-gradient p-6 rounded-2xl border border-dark-border">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pink-400 to-pink-600 flex items-center justify-center text-white font-bold">L</div>
-                        <div>
-                            <div class="text-white font-bold">Liang</div>
-                            <div class="text-xs text-gray-500">2025-07-15 | 充值成功</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed">"整个充值过程非常顺利，按照教程操作一分钟就完成了。最满意的是不需要提供账号密码，安全放心！"</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">"作为技术人员，很欣赏这种全自助的充值方案。安全透明，没有中间环节，充值后立即生效，非常高效！"</p>
                 </div>
 
-                <!-- Review 3 -->
-                <div class="card-gradient p-6 rounded-2xl border border-dark-border">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-orange-600 flex items-center justify-center text-white font-bold">S</div>
+                <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-bold text-gray-600">L</div>
                         <div>
-                            <div class="text-white font-bold">Sarah</div>
-                            <div class="text-xs text-gray-500">2025-07-12 | 充值成功</div>
+                            <div class="font-bold text-gray-900">Liang</div>
+                            <div class="text-xs text-gray-400">2025-07-15</div>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-300 text-sm leading-relaxed">"半夜充值也秒到账，太惊喜了！客服半夜也在线，有问题随时解答。这种服务体验真的很棒。"</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">"整个充值过程非常顺利，按照教程操作一分钟就完成了。最满意的是不需要提供账号密码，安全放心！"</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-bold text-gray-600">S</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Sarah</div>
+                            <div class="text-xs text-gray-400">2025-07-12</div>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">"半夜充值也秒到账，太惊喜了！客服半夜也在线，有问题随时解答。这种服务体验真的很棒。"</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系客服区 -->
-    <section id="contact" class="py-16 relative z-10">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="relative rounded-3xl overflow-hidden bg-brand-DEFAULT p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-10">
-                <!-- 背景装饰 -->
-                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl"></div>
+    <!-- 客服区域 (白底黑字，清晰明了) -->
+    <section id="contact" class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="px-4 mx-auto max-w-4xl">
+            <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-200 flex flex-col md:flex-row items-center gap-10">
                 
-                <div class="text-white relative z-10 max-w-lg">
-                    <h3 class="text-3xl font-bold mb-4">遇到问题？</h3>
-                    <p class="opacity-90 mb-6">我们的支持团队随时待命。充值不成功承诺全额退款。</p>
-                    <div class="inline-block bg-black/20 rounded-lg p-4 backdrop-blur-sm border border-white/10">
-                        <p class="text-sm opacity-70 mb-1">客服微信号</p>
-                        <div class="text-2xl font-mono font-bold tracking-wider flex items-center gap-3">
-                            lchhlp
-                            <button onclick="navigator.clipboard.writeText('lchhlp')" class="text-sm bg-white/20 px-2 py-1 rounded hover:bg-white/30 transition">
-                                <i class="far fa-copy"></i>
+                <!-- 左侧文字 -->
+                <div class="flex-1 text-left">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">需要帮助？</h3>
+                    <p class="text-gray-500 mb-6">
+                        如果在充值过程中遇到任何问题，请联系我们的客服。<br>
+                        我们承诺：<span class="text-gray-900 font-semibold">充值不成功，全额退款。</span>
+                    </p>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-100 inline-block w-full">
+                        <div class="text-xs text-gray-400 font-bold uppercase mb-1">WeChat Support</div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-mono font-bold text-gray-900">lchhlp</span>
+                            <button onclick="navigator.clipboard.writeText('lchhlp')" class="text-sm bg-white border border-gray-200 hover:border-brand-500 hover:text-brand-500 text-gray-600 px-3 py-1.5 rounded-md transition-colors shadow-sm">
+                                复制
                             </button>
                         </div>
-                        <p class="text-xs opacity-70 mt-2">添加备注: <span class="font-bold">gpt</span></p>
                     </div>
+                    <p class="text-xs text-gray-400 mt-3"><i class="fas fa-info-circle mr-1"></i> 添加时请备注: <strong>gpt</strong></p>
                 </div>
 
-                <div class="relative z-10 bg-white p-3 rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
-                    <img src="https://hlplch.aliyuntm.com/chatgpt/WX20240227-105234.png" alt="客服二维码" class="w-40 h-40 object-cover rounded-lg">
-                    <p class="text-center text-gray-800 text-xs font-bold mt-2">扫码添加客服</p>
+                <!-- 右侧二维码 -->
+                <div class="shrink-0">
+                    <div class="bg-white p-3 rounded-xl border border-gray-200 shadow-sm">
+                        <img src="https://hlplch.aliyuntm.com/chatgpt/WX20240227-105234.png" alt="QR Code" class="w-40 h-40 rounded-lg">
+                        <div class="text-center mt-2 text-xs font-medium text-gray-500">扫码添加客服</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 页脚 -->
-    <footer class="border-t border-white/10 bg-black py-10 text-center relative z-10">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col items-center">
-                <div class="mb-4 flex items-center gap-2 text-white opacity-50">
-                    <i class="fas fa-shield-alt"></i> 安全 · 稳定 · 官方
-                </div>
-                <p class="text-gray-600 text-sm">© 2025 TurboGPT 自助充值系统. All rights reserved.</p>
-                <p class="text-gray-700 text-xs mt-2">Disclaimer: This service is not directly affiliated with OpenAI.</p>
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="px-4 mx-auto max-w-7xl text-center">
+            <p class="text-base font-bold text-gray-900 mb-2">ChatGPT Plus 自助充值系统</p>
+            <p class="text-sm text-gray-500 mb-8">安全 · 极速 · 稳定</p>
+            <div class="text-xs text-gray-400">
+                &copy; 2025 All Rights Reserved. <br class="md:hidden">
+                本服务与 OpenAI 无直接关联。
             </div>
         </div>
     </footer>
 
-    <!-- 逻辑脚本 -->
     <script>
-        // 视频控制逻辑
+        // 视频播放控制
         const videoPlayer = document.getElementById('tutorialVideo');
         const playOverlay = document.getElementById('playOverlay');
 
         function togglePlay() {
             if (videoPlayer.paused) {
                 videoPlayer.play();
-                playOverlay.classList.add('hidden');
+                playOverlay.style.opacity = '0';
+                playOverlay.style.pointerEvents = 'none';
             } else {
                 videoPlayer.pause();
-                playOverlay.classList.remove('hidden');
+                playOverlay.style.opacity = '1';
+                playOverlay.style.pointerEvents = 'auto';
             }
         }
 
-        playOverlay.addEventListener('click', togglePlay);
-        videoPlayer.addEventListener('click', togglePlay);
-        videoPlayer.addEventListener('play', () => playOverlay.classList.add('hidden'));
-        videoPlayer.addEventListener('pause', () => playOverlay.classList.remove('hidden'));
-
-        // 业务配置逻辑 (保留原版)
-        const configValue = 'A'; // A 或 B
-
+        // A/B 配置逻辑 (保持原样)
+        const configValue = 'A'; 
         const linkMap = {
             A: {
                 rechargeUrl: 'https://www.987ai.vip/',
@@ -430,27 +387,23 @@
                 videoUrl: 'https://9977ai.vip/9977%E6%95%99%E7%A8%8B.mp4'
             }
         };
-
         const selected = linkMap[configValue];
 
-        // 注入链接
         document.getElementById('rechargeLinkStep').href = selected.rechargeUrl;
         document.getElementById('rechargeLinkBtn').href = selected.rechargeUrl;
-        
-        // 注入视频
         document.getElementById('videoSource').src = selected.videoUrl;
         videoPlayer.load();
 
-        // 滚动监听导航栏效果
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-lg');
-                nav.style.background = 'rgba(11, 15, 25, 0.9)';
-            } else {
-                nav.classList.remove('shadow-lg');
-                nav.style.background = 'rgba(11, 15, 25, 0.7)';
-            }
+        // 视频事件监听
+        playOverlay.addEventListener('click', togglePlay);
+        videoPlayer.addEventListener('click', togglePlay);
+        videoPlayer.addEventListener('play', () => {
+            playOverlay.style.opacity = '0';
+            playOverlay.style.pointerEvents = 'none';
+        });
+        videoPlayer.addEventListener('pause', () => {
+            playOverlay.style.opacity = '1';
+            playOverlay.style.pointerEvents = 'auto';
         });
     </script>
 </body>
