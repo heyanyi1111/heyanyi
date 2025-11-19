@@ -218,21 +218,21 @@
         </div>
     </section>
 
-    <!-- 视频教程 (简约边框风格) -->
+    <!--&lt;!&ndash; 视频教程 (简约边框风格) &ndash;&gt;
     <section id="video" class="py-20 bg-gray-50 border-y border-gray-200">
         <div class="px-4 mx-auto max-w-5xl text-center">
             <div class="mb-10">
                 <span class="text-brand-500 font-bold tracking-wide text-sm uppercase">Video Tutorial</span>
                 <h2 class="mt-2 text-3xl font-bold text-gray-900">1分钟操作演示</h2>
             </div>
-            
+
             <div class="relative rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-white">
                 <div class="aspect-w-16 aspect-h-9 relative bg-black group cursor-pointer" onclick="togglePlay()">
                     <video id="tutorialVideo" class="w-full h-full object-contain" poster="https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WechatIMG1540.jpg">
                         <source id="videoSource" src="#" type="video/mp4">
                         您的浏览器不支持播放此视频。
                     </video>
-                    <!-- 播放按钮 -->
+                    &lt;!&ndash; 播放按钮 &ndash;&gt;
                     <div id="playOverlay" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-all z-10">
                         <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg transition-transform transform group-hover:scale-110">
                             <i class="fas fa-play text-brand-500 text-2xl pl-1"></i>
@@ -247,6 +247,35 @@
                     <span class="text-sm text-gray-400">GPT Upgrade</span>
                 </div>
             </div>
+        </div>
+    </section>-->
+    <!-- 视频展示区 (Macbook 风格框架) -->
+    <section id="video" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="px-4 mx-auto max-w-5xl text-center">
+            <div class="mb-10">
+                <span class="text-brand-500 font-bold tracking-wide text-sm uppercase">Video Tutorial</span>
+                <h2 class="mt-2 text-3xl font-bold text-gray-900">1分钟操作演示</h2>
+            </div>
+
+            <div class="relative mx-auto bg-gray-800 rounded-t-2xl border-4 border-gray-700 shadow-2xl" style="aspect-ratio: 16/9;">
+                <!-- 屏幕区域 -->
+                <div class="absolute inset-0 bg-black rounded-t-lg overflow-hidden group">
+                    <video id="tutorialVideo" class="w-full h-full object-contain" poster="https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WechatIMG1540.jpg">
+                        <source id="videoSource" src="#" type="video/mp4">
+                        您的浏览器不支持播放。
+                    </video>
+                    <!-- 播放遮罩 -->
+                    <div id="playOverlay" class="absolute inset-0 flex items-center justify-center bg-black/60 cursor-pointer group-hover:bg-black/40 transition-all">
+                        <div class="relative">
+                            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center z-10 relative shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-transform group-hover:scale-110">
+                                <i class="fas fa-play text-brand-DEFAULT text-2xl ml-1"></i>
+                            </div>
+                            <div class="ripple w-20 h-20 top-0 left-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 底座 -->
         </div>
     </section>
 
