@@ -79,6 +79,44 @@
         .anchor-offset {
             scroll-margin-top: 96px;
         }
+        .review-track {
+            animation: review-marquee 36s linear infinite;
+            width: max-content;
+        }
+        .review-marquee:hover .review-track {
+            animation-play-state: paused;
+        }
+        .review-fade::before,
+        .review-fade::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+            width: 72px;
+            pointer-events: none;
+        }
+        .review-fade::before {
+            left: 0;
+            background: linear-gradient(90deg, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
+        }
+        .review-fade::after {
+            right: 0;
+            background: linear-gradient(270deg, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
+        }
+        @keyframes review-marquee {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .review-track {
+                animation: none;
+            }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -433,6 +471,183 @@
                             <i class="fa-solid fa-play ml-1"></i>
                         </span>
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="anchor-offset overflow-hidden bg-slate-50 py-20">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+            <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                <div class="max-w-3xl">
+                    <p class="font-black uppercase tracking-wide text-brand-600">Reviews</p>
+                    <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">用户真实反馈</h2>
+                    <p class="mt-4 text-lg leading-8 text-slate-600">来自真实下单用户的充值体验，包含自助升级、到账速度、客服协助和使用感受。</p>
+                </div>
+                <a href="https://ja2t57ja0d.feishu.cn/wiki/KipEwMw3AidnexkCu9dch3Kznjb" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-black text-slate-950 shadow-line transition hover:border-brand-600 hover:text-brand-700">
+                    查看更多留言
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                </a>
+            </div>
+
+            <div class="review-marquee review-fade relative mt-10 overflow-hidden">
+                <div class="review-track flex gap-5 pr-5">
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-50 text-lg font-black text-brand-700">六</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">六六</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“整个充值过程非常顺利，按照教程操作一分钟就完成了。最满意的是不需要提供账号密码，安全放心！”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-lg font-black text-slate-700">Z</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">zackroo</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“之前担心自助充值会很复杂，实际跟着步骤一步步操作非常清晰。客服回复也很及时，解决了我的疑问。”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-lg font-black text-emerald-700">K</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">Kyle</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“作为技术人员，很欣赏这种全自助的升级方案。安全透明，没有中间环节，充值后立即生效，非常高效！”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cyan-50 text-lg font-black text-cyan-700">X</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">XXT</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-14 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“第一次使用就成功了，操作界面很友好，一步一步操作就行，而且到账速度真的很快，强烈推荐！”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-violet-50 text-lg font-black text-violet-700">七</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">七安</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-13 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“对比了好几家，这家最靠谱。不需要国外信用卡，还可以协助升级。已经推荐给同事使用了，服务确实不错。”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-rose-50 text-lg font-black text-rose-700">S</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">Sarah</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-12 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“半夜充值也很快到账，太惊喜了！客服半夜也在线，有问题随时解答。这种服务体验真的很棒，会长期使用。”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]" aria-hidden="true">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-50 text-lg font-black text-brand-700">六</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">六六</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“整个充值过程非常顺利，按照教程操作一分钟就完成了。最满意的是不需要提供账号密码，安全放心！”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]" aria-hidden="true">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-lg font-black text-slate-700">Z</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">zackroo</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“之前担心自助充值会很复杂，实际跟着步骤一步步操作非常清晰。客服回复也很及时，解决了我的疑问。”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]" aria-hidden="true">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-lg font-black text-emerald-700">K</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">Kyle</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-15 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“作为技术人员，很欣赏这种全自助的升级方案。安全透明，没有中间环节，充值后立即生效，非常高效！”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]" aria-hidden="true">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cyan-50 text-lg font-black text-cyan-700">X</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">XXT</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-14 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“第一次使用就成功了，操作界面很友好，一步一步操作就行，而且到账速度真的很快，强烈推荐！”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]" aria-hidden="true">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-violet-50 text-lg font-black text-violet-700">七</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">七安</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-13 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“对比了好几家，这家最靠谱。不需要国外信用卡，还可以协助升级。已经推荐给同事使用了，服务确实不错。”</p>
+                    </article>
+                    <article class="w-[300px] shrink-0 rounded-2xl border border-slate-200 bg-white p-6 shadow-line md:w-[360px]" aria-hidden="true">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-rose-50 text-lg font-black text-rose-700">S</div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h3 class="truncate font-black text-slate-950">Sarah</h3>
+                                    <div class="shrink-0 text-xs text-amber-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                                <p class="mt-1 text-xs font-bold text-slate-400">2025-07-12 充值成功</p>
+                            </div>
+                        </div>
+                        <p class="mt-5 min-h-[112px] text-sm leading-7 text-slate-600">“半夜充值也很快到账，太惊喜了！客服半夜也在线，有问题随时解答。这种服务体验真的很棒，会长期使用。”</p>
+                    </article>
                 </div>
             </div>
         </div>
