@@ -69,6 +69,24 @@
         #process .grid > div { border: 0; border-top: 1px solid rgba(255,255,255,.22); border-radius: 0; background: transparent; padding-left: 0; }
         #faq details { border-radius: 8px; box-shadow: none; }
         #reviews article { border-radius: 8px; }
+        html.recharge-modal-open { overflow: hidden; }
+        .recharge-dialog {
+            width: min(560px, calc(100% - 32px));
+            max-height: calc(100vh - 32px);
+            max-height: calc(100dvh - 32px);
+            margin: auto;
+            padding: 0;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #fff;
+            color: #17212b;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, .24);
+        }
+        .recharge-dialog::backdrop { background: rgba(15, 23, 42, .55); }
+        .recharge-dialog :is(a, button):focus-visible,
+        [data-open-recharge]:focus-visible { outline: 2px solid #0f766e; outline-offset: 3px; }
         details summary::-webkit-details-marker {
             display: none;
         }
@@ -249,9 +267,9 @@
                 <a href="#contact" class="block rounded px-3 py-2 text-sm font-semibold hover:bg-slate-50">联系客服</a>
             </div>
         </details>
-        <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="inline-flex shrink-0 items-center justify-center rounded-lg bg-slate-950 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700">
-            购买卡密
-        </a>
+        <button type="button" data-open-recharge aria-haspopup="dialog" aria-controls="rechargeDialog" class="inline-flex shrink-0 items-center justify-center rounded-lg bg-slate-950 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700">
+            立即充值
+        </button>
     </nav>
 </header>
 
@@ -262,7 +280,7 @@
             <h1 class="mt-5 text-[2rem] font-extrabold leading-tight text-slate-950 sm:text-5xl md:text-6xl">ChatGPT 会员充值 <span class="hero-plans mt-4 text-xl sm:text-3xl md:text-4xl"><span>Plus</span> <span>Pro 5x</span> <span>Pro 20x</span></span></h1>
             <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">三种套餐，按需选择。购买对应卡密后，为自己的账号完成充值。中文教程和微信客服，陪你走完每一步。</p>
             <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-                <a href="#plans" class="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-600 px-7 font-bold text-white transition hover:bg-brand-700">选择充值套餐 <i class="fa-solid fa-arrow-right ml-3 text-sm"></i></a>
+                <button type="button" data-open-recharge aria-haspopup="dialog" aria-controls="rechargeDialog" class="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-600 px-7 font-bold text-white transition hover:bg-brand-700">立即充值 <i class="fa-solid fa-arrow-right ml-3 text-sm" aria-hidden="true"></i></button>
                 <a id="rechargeLinkBtn" href="#" target="_blank" rel="nofollow noopener" class="inline-flex min-h-12 items-center justify-center rounded-lg border border-slate-300 bg-white px-7 font-bold text-slate-900 transition hover:border-brand-600 hover:text-brand-700">已有卡密，前往充值</a>
             </div>
             <p class="mt-5 text-sm text-slate-500">价格与库存以发卡页面实时信息为准</p>
@@ -286,19 +304,19 @@
                     <p class="text-sm text-slate-500">ChatGPT</p>
                     <h3 class="mt-2 text-3xl font-bold text-slate-950">Plus</h3>
                     <p class="mt-3 text-slate-600">Plus 套餐充值卡密</p>
-                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" aria-label="查看 ChatGPT Plus 套餐价格与说明" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">查看价格与说明 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+                    <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" aria-label="充值 ChatGPT Plus，前往发卡页" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">充值 Plus <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
                 </article>
                 <article class="min-w-0 rounded-lg border border-slate-200 p-6">
                     <p class="text-sm text-slate-500">ChatGPT</p>
                     <h3 class="mt-2 text-3xl font-bold text-slate-950">Pro 5x</h3>
                     <p class="mt-3 text-slate-600">Pro 5x 套餐充值卡密</p>
-                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" aria-label="查看 ChatGPT Pro 5x 套餐价格与说明" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">查看价格与说明 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+                    <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" aria-label="充值 ChatGPT Pro 5x，前往发卡页" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">充值 Pro 5x <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
                 </article>
                 <article class="min-w-0 rounded-lg border border-slate-200 p-6">
                     <p class="text-sm text-slate-500">ChatGPT</p>
                     <h3 class="mt-2 text-3xl font-bold text-slate-950">Pro 20x</h3>
                     <p class="mt-3 text-slate-600">Pro 20x 套餐充值卡密</p>
-                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" aria-label="查看 ChatGPT Pro 20x 套餐价格与说明" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">查看价格与说明 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+                    <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" aria-label="充值 ChatGPT Pro 20x，前往发卡页" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">充值 Pro 20x <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
                 </article>
             </div>
             <p class="mt-6 text-sm leading-7 text-slate-500">已有会员或不确定账号是否适用？<a href="#contact" class="font-semibold text-brand-700 underline underline-offset-4">购买前咨询客服</a>。</p>
@@ -351,7 +369,7 @@
                     <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-400 text-slate-950 font-black">1</div>
                     <h3 class="mt-5 text-lg font-black">选择套餐并购买</h3>
                     <p class="mt-2 leading-7 text-slate-300">选择 Plus、Pro 5x 或 Pro 20x，核对商品说明后购买对应卡密。</p>
-                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="mt-4 inline-block font-bold text-emerald-300">去购买</a>
+                    <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" class="mt-4 inline-block font-bold text-emerald-300">购买充值卡密</a>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
                     <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-400 text-slate-950 font-black">2</div>
@@ -680,8 +698,8 @@
                     <img src="https://hlplch.aliyuntm.com/chatgpt/WX20240227-105234.png" onerror="this.onerror=null;this.src='https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WX20240227-105234.png'" alt="ChatGPT TopUp Plus、Pro 5x、Pro 20x 充值客服微信二维码" class="block h-auto w-full max-w-[260px] object-contain" width="378" height="440" loading="eager" decoding="async">
                     <div class="mt-3 text-sm font-bold text-slate-600">扫码添加客服微信</div>
                 </div>
-                <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-brand-600 px-4 py-3 font-black text-white hover:bg-brand-700">
-                    进入发卡页购买卡密
+                <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" class="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-brand-600 px-4 py-3 font-black text-white hover:bg-brand-700">
+                    前往发卡页充值
                 </a>
             </div>
         </div>
@@ -701,7 +719,85 @@
     </div>
 </footer>
 
+<dialog id="rechargeDialog" class="recharge-dialog" aria-labelledby="rechargeDialogTitle" aria-describedby="rechargeDialogDescription">
+    <div class="p-5 sm:p-8">
+        <div class="flex items-start justify-between gap-4">
+            <div class="min-w-0">
+                <p class="section-kicker">ChatGPT TopUp</p>
+                <h2 id="rechargeDialogTitle" class="mt-2 text-2xl font-bold text-slate-950">选择要充值的套餐</h2>
+            </div>
+            <button id="closeRechargeDialog" type="button" autofocus aria-label="关闭套餐选择" title="关闭套餐选择" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-500 transition hover:bg-slate-100 hover:text-slate-950">
+                <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p id="rechargeDialogDescription" class="mt-4 text-sm leading-7 text-slate-600">点击套餐前往发卡页，购买对应充值卡密。</p>
+        <div class="mt-5 divide-y divide-slate-200 border-y border-slate-200">
+            <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" data-recharge-plan="Plus" aria-label="充值 ChatGPT Plus，前往发卡页" class="flex min-h-24 items-center justify-between gap-4 px-2 py-5 transition hover:bg-brand-50">
+                <span class="min-w-0"><span class="block text-xs text-slate-500">ChatGPT</span><span class="mt-1 block text-xl font-bold text-slate-950">Plus</span></span>
+                <span class="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-brand-700">去充值 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
+            </a>
+            <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" data-recharge-plan="Pro 5x" aria-label="充值 ChatGPT Pro 5x，前往发卡页" class="flex min-h-24 items-center justify-between gap-4 px-2 py-5 transition hover:bg-brand-50">
+                <span class="min-w-0"><span class="block text-xs text-slate-500">ChatGPT</span><span class="mt-1 block text-xl font-bold text-slate-950">Pro 5x</span></span>
+                <span class="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-brand-700">去充值 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
+            </a>
+            <a href="https://qfcc99.com/shop/codes" target="_blank" rel="nofollow noopener noreferrer" data-recharge-plan="Pro 20x" aria-label="充值 ChatGPT Pro 20x，前往发卡页" class="flex min-h-24 items-center justify-between gap-4 px-2 py-5 transition hover:bg-brand-50">
+                <span class="min-w-0"><span class="block text-xs text-slate-500">ChatGPT</span><span class="mt-1 block text-xl font-bold text-slate-950">Pro 20x</span></span>
+                <span class="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-brand-700">去充值 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
+            </a>
+        </div>
+        <p class="mt-5 text-xs leading-6 text-slate-500">进入发卡页后请选择对应商品，价格与库存以发卡页实时信息为准。</p>
+    </div>
+</dialog>
+
 <script>
+    const rechargeDialog = document.getElementById('rechargeDialog');
+    const closeRechargeDialog = document.getElementById('closeRechargeDialog');
+    let rechargeDialogTrigger = null;
+    if (rechargeDialog && closeRechargeDialog) {
+        document.querySelectorAll('[data-open-recharge]').forEach(button => {
+            button.addEventListener('click', () => {
+                if (typeof rechargeDialog.showModal !== 'function') {
+                    document.getElementById('plans').scrollIntoView();
+                    return;
+                }
+                rechargeDialogTrigger = button;
+                const menu = document.querySelector('nav details');
+                if (menu) menu.open = false;
+                rechargeDialog.showModal();
+                document.documentElement.classList.add('recharge-modal-open');
+            });
+        });
+        closeRechargeDialog.addEventListener('click', () => rechargeDialog.close());
+        rechargeDialog.addEventListener('close', () => {
+            document.documentElement.classList.remove('recharge-modal-open');
+            if (rechargeDialogTrigger) rechargeDialogTrigger.focus({ preventScroll: true });
+        });
+        rechargeDialog.addEventListener('keydown', event => {
+            if (event.key !== 'Tab') return;
+            const controls = rechargeDialog.querySelectorAll('button:not([disabled]), a[href]');
+            const first = controls[0];
+            const last = controls[controls.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        });
+        rechargeDialog.addEventListener('click', event => {
+            if (event.target !== rechargeDialog) return;
+            const bounds = rechargeDialog.getBoundingClientRect();
+            if (event.clientX < bounds.left || event.clientX > bounds.right ||
+                event.clientY < bounds.top || event.clientY > bounds.bottom) {
+                rechargeDialog.close();
+            }
+        });
+        rechargeDialog.querySelectorAll('[data-recharge-plan]').forEach(link => {
+            link.addEventListener('click', () => rechargeDialog.close());
+        });
+    }
+
     const configValue = 'A';
     const linkMap = {
         A: {
