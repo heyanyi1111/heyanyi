@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Plus 充值代充 | GPT 会员升级与自助卡密充值 - ChatGPT TopUp</title>
-    <meta name="description" content="ChatGPT TopUp 提供 ChatGPT Plus 充值代充、自助卡密充值、GPT 会员升级服务。无需海外信用卡，支持微信支付宝购买卡密，按教程自助完成，售后客服协助处理充值问题。">
-    <meta name="keywords" content="ChatGPT Plus充值,ChatGPT代充,GPT代充,ChatGPT充值,GPT充值,ChatGPT Plus代充,OpenAI充值,Plus会员升级,自助卡密充值">
+    <title>ChatGPT 充值代充 | Plus、Pro 5x、Pro 20x - ChatGPT TopUp</title>
+    <meta name="description" content="ChatGPT TopUp 提供 ChatGPT Plus、Pro 5x、Pro 20x 三种套餐的充值代充与自助卡密服务。选择套餐、购买卡密、按指引充值，提供中文教程及微信客服协助。价格、库存和适用条件以发卡页为准。">
+    <meta name="keywords" content="ChatGPT Plus充值,ChatGPT Pro 5x充值,ChatGPT Pro 20x充值,ChatGPT代充,GPT充值,Plus会员升级,Pro会员升级,自助卡密充值">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="author" content="ChatGPT TopUp">
     <link rel="canonical" href="https://chongzhi.aliyuncn.com/">
@@ -13,8 +13,8 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="ChatGPT TopUp">
-    <meta property="og:title" content="ChatGPT Plus 充值代充 | GPT 会员升级与自助卡密充值">
-    <meta property="og:description" content="无需海外信用卡，购买卡密后按教程完成 ChatGPT Plus 充值，客服协助处理售后问题。">
+    <meta property="og:title" content="ChatGPT 充值代充 | Plus、Pro 5x、Pro 20x - ChatGPT TopUp">
+    <meta property="og:description" content="Plus、Pro 5x、Pro 20x 三种套餐均支持充值。选择套餐并购买对应卡密，按中文指引自助操作，遇到问题可联系微信客服。">
     <meta property="og:url" content="https://chongzhi.aliyuncn.com/">
     <meta property="og:image" content="https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WechatIMG1540.jpg">
     <meta name="twitter:card" content="summary_large_image">
@@ -52,28 +52,23 @@
         }
     </script>
     <style>
-        body {
-            color: #0f172a;
-            background: #f8fafc;
-        }
+        body { color: #17212b; background: #fff; }
         .glass {
             background: rgba(255, 255, 255, 0.86);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
         }
-        .hero-grid {
-            background:
-                radial-gradient(circle at 12% 20%, rgba(16, 163, 127, .14), transparent 28%),
-                radial-gradient(circle at 84% 12%, rgba(14, 116, 144, .12), transparent 25%),
-                linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
-        }
-        .mesh {
-            background-image:
-                linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
-            background-size: 34px 34px;
-            mask-image: linear-gradient(to bottom, black, transparent 88%);
-        }
+        .hero-grid { background: #f4f8f7; }
+        .hero-step + .hero-step { border-left: 1px solid #d9e4e1; }
+        .hero-plans { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 16px; }
+        .hero-plans > span { white-space: nowrap; }
+        .hero-plans > span + span::before { content: "/"; margin-right: 16px; color: #94a3b8; font-weight: 400; }
+        .section-kicker { color: #0f766e; font-size: .75rem; font-weight: 800; text-transform: uppercase; }
+        .section-heading { max-width: 720px; line-height: 1.25; }
+        #advantages .grid.sm\:grid-cols-2 > div { border-radius: 8px; }
+        #process .grid > div { border: 0; border-top: 1px solid rgba(255,255,255,.22); border-radius: 0; background: transparent; padding-left: 0; }
+        #faq details { border-radius: 8px; box-shadow: none; }
+        #reviews article { border-radius: 8px; }
         details summary::-webkit-details-marker {
             display: none;
         }
@@ -99,11 +94,11 @@
         }
         .review-fade::before {
             left: 0;
-            background: linear-gradient(90deg, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
+            background: linear-gradient(90deg, #f4f8f7 0%, rgba(244, 248, 247, 0) 100%);
         }
         .review-fade::after {
             right: 0;
-            background: linear-gradient(270deg, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
+            background: linear-gradient(270deg, #f4f8f7 0%, rgba(244, 248, 247, 0) 100%);
         }
         @keyframes review-marquee {
             from {
@@ -117,6 +112,10 @@
             .review-track {
                 animation: none;
             }
+        }
+        @media (max-width: 639px) {
+            .hero-step + .hero-step { border-left: 0; border-top: 1px solid #d9e4e1; }
+            .review-fade::before, .review-fade::after { width: 24px; }
         }
     </style>
     <script type="application/ld+json">
@@ -139,29 +138,29 @@
                 "@type": "WebSite",
                 "@id": "https://chongzhi.aliyuncn.com/#website",
                 "url": "https://chongzhi.aliyuncn.com/",
-                "name": "ChatGPT TopUp ChatGPT Plus 充值代充",
+                "name": "ChatGPT TopUp - Plus、Pro 5x、Pro 20x 充值服务",
                 "inLanguage": "zh-CN",
                 "publisher": { "@id": "https://chongzhi.aliyuncn.com/#organization" }
             },
             {
                 "@type": "Service",
                 "@id": "https://chongzhi.aliyuncn.com/#service",
-                "name": "ChatGPT Plus 充值代充与自助卡密充值",
-                "serviceType": "ChatGPT Plus 会员升级服务",
+                "name": "ChatGPT Plus、Pro 5x、Pro 20x 充值升级与自助卡密充值",
+                "serviceType": "ChatGPT 会员充值升级服务",
                 "provider": { "@id": "https://chongzhi.aliyuncn.com/#organization" },
                 "areaServed": "CN",
                 "url": "https://chongzhi.aliyuncn.com/",
-                "description": "面向没有海外信用卡或不熟悉订阅流程的用户，提供 ChatGPT Plus 充值卡密购买、充值教程与售后协助。"
+                "description": "提供 ChatGPT Plus、Pro 5x、Pro 20x 三种套餐的充值卡密购买入口、中文操作教程和微信客服协助。价格、库存及适用条件以发卡页面为准。"
             },
             {
                 "@type": "HowTo",
                 "@id": "https://chongzhi.aliyuncn.com/#howto",
-                "name": "ChatGPT Plus 自助充值流程",
+                "name": "ChatGPT Plus、Pro 5x、Pro 20x 自助充值流程",
                 "step": [
-                    { "@type": "HowToStep", "name": "购买卡密", "text": "进入发卡页面选择 ChatGPT Plus 充值卡密并完成支付。" },
-                    { "@type": "HowToStep", "name": "进入充值中心", "text": "打开充值中心，填写订单中的卡密。" },
-                    { "@type": "HowToStep", "name": "登录账号验证", "text": "按页面提示登录自己的 ChatGPT 账号并完成验证。" },
-                    { "@type": "HowToStep", "name": "确认会员到账", "text": "充值完成后回到 ChatGPT 账号检查 Plus 会员状态。" }
+                    { "@type": "HowToStep", "name": "选择套餐并购买", "text": "选择 Plus、Pro 5x 或 Pro 20x，核对商品说明后购买对应卡密。" },
+                    { "@type": "HowToStep", "name": "进入充值中心", "text": "从订单中复制卡密，进入充值中心，按提示填写并核对套餐。" },
+                    { "@type": "HowToStep", "name": "登录并完成验证", "text": "自行登录需要充值的 ChatGPT 账号，按所购套餐的指引完成操作。" },
+                    { "@type": "HowToStep", "name": "确认充值结果", "text": "回到 ChatGPT 查看会员状态，确认与所购套餐一致，并保留订单凭证。" }
                 ]
             },
             {
@@ -170,23 +169,43 @@
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "没有海外信用卡可以充值 ChatGPT Plus 吗？",
-                        "acceptedAnswer": { "@type": "Answer", "text": "可以。本站提供卡密购买与自助充值教程，用户可通过微信或支付宝购买卡密，再按充值中心提示完成会员升级。" }
+                        "name": "支持哪些 ChatGPT 充值套餐？",
+                        "acceptedAnswer": { "@type": "Answer", "text": "支持 ChatGPT Plus、Pro 5x、Pro 20x 三种套餐。进入发卡页后选择对应商品，查看价格、库存和适用条件，再购买充值卡密。" }
                     },
                     {
                         "@type": "Question",
-                        "name": "充值需要提供 ChatGPT 密码吗？",
-                        "acceptedAnswer": { "@type": "Answer", "text": "不建议向任何人提供账号密码。本站流程以用户自行登录和自助操作为主，如遇问题可联系人工客服协助排查。" }
+                        "name": "Plus、Pro 5x 和 Pro 20x 怎么选？",
+                        "acceptedAnswer": { "@type": "Answer", "text": "按使用需求和预算选择，并核对商品介绍中的套餐内容、充值时长和账号要求。如果已经开通会员，或希望更换套餐，购买前请先联系客服确认是否适用。" }
                     },
                     {
                         "@type": "Question",
-                        "name": "ChatGPT Plus 充值多久能到账？",
-                        "acceptedAnswer": { "@type": "Answer", "text": "正常情况下按教程操作后很快可以完成，实际到账时间会受 OpenAI 页面状态、网络环境、账号状态与支付通道影响。" }
+                        "name": "没有海外信用卡，也能购买充值卡密吗？",
+                        "acceptedAnswer": { "@type": "Answer", "text": "可以通过发卡页提供的支付方式购买对应套餐卡密，无需自行绑定海外信用卡。具体支付方式以结算页面为准。" }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "充值需要把 ChatGPT 账号密码发给客服吗？",
+                        "acceptedAnswer": { "@type": "Answer", "text": "请自行登录和操作账号，不要把密码发给客服。客服可以根据订单号和报错截图协助排查充值问题。" }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Plus、Pro 5x、Pro 20x 充值多久生效？",
+                        "acceptedAnswer": { "@type": "Answer", "text": "以所购套餐说明和充值页面结果为准。账号状态、网络和充值通道可能影响处理时间，完成后请在自己的 ChatGPT 账号内确认会员状态。" }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "卡密无法使用或充值报错怎么办？",
+                        "acceptedAnswer": { "@type": "Answer", "text": "先核对卡密是否完整、所选套餐是否与订单一致，并确认账号可以正常登录。仍未解决时，请保留订单号与报错截图联系微信客服。" }
                     },
                     {
                         "@type": "Question",
                         "name": "充值失败可以退款吗？",
-                        "acceptedAnswer": { "@type": "Answer", "text": "如果卡密未能完成充值，请保留订单号和错误截图联系微信客服。经核实无法处理的订单，会按售后规则协助补充或退款。" }
+                        "acceptedAnswer": { "@type": "Answer", "text": "请保留订单号和报错截图联系微信客服。客服核实卡密使用情况及失败原因后，按对应商品的售后规则处理。" }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "充值到自己的账号，还是提供共享账号？",
+                        "acceptedAnswer": { "@type": "Answer", "text": "充值面向你自己的 ChatGPT 账号，Plus、Pro 5x 和 Pro 20x 均按所选商品办理。本站不提供多人共用的共享账号。" }
                     }
                 ]
             }
@@ -205,7 +224,7 @@
 </head>
 <body class="antialiased">
 <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 glass">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8" aria-label="主导航">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 lg:px-8" aria-label="主导航">
         <a href="/" class="flex items-center gap-3" aria-label="ChatGPT TopUp 首页">
             <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white shadow-soft">
                 <i class="fa-solid fa-bolt"></i>
@@ -220,168 +239,69 @@
             <a href="#faq" class="hover:text-brand-600">常见问题</a>
             <a href="#contact" class="hover:text-brand-600">联系客服</a>
         </div>
-        <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="inline-flex items-center justify-center rounded-lg bg-slate-950 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700">
+        <details class="relative ml-auto md:hidden">
+            <summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-slate-200 text-slate-800" aria-label="打开菜单"><i class="fa-solid fa-bars"></i></summary>
+            <div class="absolute right-0 top-12 z-50 w-44 rounded-lg border border-slate-200 bg-white p-2 shadow-soft">
+                <a href="#plans" class="block rounded px-3 py-2 text-sm font-semibold hover:bg-slate-50">充值套餐</a>
+                <a href="#process" class="block rounded px-3 py-2 text-sm font-semibold hover:bg-slate-50">充值流程</a>
+                <a href="#reviews" class="block rounded px-3 py-2 text-sm font-semibold hover:bg-slate-50">用户反馈</a>
+                <a href="#faq" class="block rounded px-3 py-2 text-sm font-semibold hover:bg-slate-50">常见问题</a>
+                <a href="#contact" class="block rounded px-3 py-2 text-sm font-semibold hover:bg-slate-50">联系客服</a>
+            </div>
+        </details>
+        <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="inline-flex shrink-0 items-center justify-center rounded-lg bg-slate-950 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700">
             购买卡密
         </a>
     </nav>
 </header>
 
 <main>
-    <section class="hero-grid relative overflow-hidden pt-28 lg:pt-36">
-        <div class="mesh absolute inset-0 pointer-events-none"></div>
-        <div class="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-24">
-            <div class="flex flex-col justify-center">
-                <div class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-brand-100 bg-white px-3 py-1.5 text-sm font-bold text-brand-700 shadow-sm">
-                    <i class="fa-solid fa-circle-check"></i>
-                    ChatGPT Plus 充值代充 · 自助卡密 · 售后协助
-                </div>
-                <h1 class="max-w-4xl text-4xl font-black leading-tight tracking-normal text-slate-950 md:text-6xl">
-                    ChatGPT Plus 充值代充，帮你更快完成 GPT 会员升级
-                </h1>
-                <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                    没有海外信用卡、不熟悉订阅页面、支付失败或需要稳定售后？ChatGPT TopUp 提供 ChatGPT Plus 充值卡密、清晰教程与微信客服协助，适合办公、学习、编程和内容创作用户。
-                </p>
-                <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="inline-flex items-center justify-center rounded-lg bg-brand-600 px-6 py-3.5 text-base font-extrabold text-white shadow-soft transition hover:bg-brand-700">
-                        立即购买充值卡密
-                        <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </a>
-                    <a id="rechargeLinkBtn" href="#" target="_blank" rel="nofollow noopener" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-base font-extrabold text-slate-900 transition hover:border-brand-600 hover:text-brand-700">
-                        <i class="fa-solid fa-bolt mr-2 text-brand-600"></i>
-                        前往充值中心
-                    </a>
-                </div>
-                <div class="mt-8 grid max-w-2xl grid-cols-2 gap-3 text-sm sm:grid-cols-4">
-                    <div class="rounded-lg bg-white p-4 shadow-line">
-                        <div class="font-black text-slate-950">自助下单</div>
-                        <div class="mt-1 text-slate-500">24 小时可买</div>
-                    </div>
-                    <div class="rounded-lg bg-white p-4 shadow-line">
-                        <div class="font-black text-slate-950">无需外卡</div>
-                        <div class="mt-1 text-slate-500">微信支付宝</div>
-                    </div>
-                    <div class="rounded-lg bg-white p-4 shadow-line">
-                        <div class="font-black text-slate-950">教程清晰</div>
-                        <div class="mt-1 text-slate-500">按步骤操作</div>
-                    </div>
-                    <div class="rounded-lg bg-white p-4 shadow-line">
-                        <div class="font-black text-slate-950">售后协助</div>
-                        <div class="mt-1 text-slate-500">微信客服</div>
-                    </div>
-                </div>
+    <section class="hero-grid pt-28 lg:pt-36">
+        <div class="mx-auto max-w-4xl px-4 pb-14 text-center lg:px-8 lg:pb-20">
+            <p class="section-kicker">ChatGPT TopUp</p>
+            <h1 class="mt-5 text-[2rem] font-extrabold leading-tight text-slate-950 sm:text-5xl md:text-6xl">ChatGPT 会员充值 <span class="hero-plans mt-4 text-xl sm:text-3xl md:text-4xl"><span>Plus</span> <span>Pro 5x</span> <span>Pro 20x</span></span></h1>
+            <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">三种套餐，按需选择。购买对应卡密后，为自己的账号完成充值。中文教程和微信客服，陪你走完每一步。</p>
+            <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+                <a href="#plans" class="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-600 px-7 font-bold text-white transition hover:bg-brand-700">选择充值套餐 <i class="fa-solid fa-arrow-right ml-3 text-sm"></i></a>
+                <a id="rechargeLinkBtn" href="#" target="_blank" rel="nofollow noopener" class="inline-flex min-h-12 items-center justify-center rounded-lg border border-slate-300 bg-white px-7 font-bold text-slate-900 transition hover:border-brand-600 hover:text-brand-700">已有卡密，前往充值</a>
             </div>
-            <div class="flex items-center">
-                <div class="w-full rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
-                    <div class="rounded-xl bg-slate-950 p-4 text-white">
-                        <div class="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
-                            <div>
-                                <div class="text-sm text-slate-300">ChatGPT TopUp Recharge</div>
-                                <div class="mt-1 text-xl font-black">Plus 会员升级面板</div>
-                            </div>
-                            <div class="rounded-full bg-brand-500/20 px-3 py-1 text-sm font-bold text-emerald-200">Ready</div>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="rounded-lg bg-white/8 p-4">
-                                <div class="flex items-center justify-between text-sm">
-                                    <span class="text-slate-300">套餐类型</span>
-                                    <span class="font-bold">ChatGPT Plus</span>
-                                </div>
-                                <div class="mt-3 h-2 rounded-full bg-white/10">
-                                    <div class="h-2 w-4/5 rounded-full bg-brand-500"></div>
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="rounded-lg bg-white p-4 text-slate-950">
-                                    <i class="fa-solid fa-key text-brand-600"></i>
-                                    <div class="mt-2 text-sm text-slate-500">卡密兑换</div>
-                                    <div class="font-black">订单即取</div>
-                                </div>
-                                <div class="rounded-lg bg-white p-4 text-slate-950">
-                                    <i class="fa-solid fa-headset text-brand-600"></i>
-                                    <div class="mt-2 text-sm text-slate-500">售后状态</div>
-                                    <div class="font-black">在线协助</div>
-                                </div>
-                            </div>
-                            <div class="rounded-lg border border-brand-500/30 bg-brand-500/10 p-4">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-shield-halved mt-1 text-emerald-300"></i>
-                                    <p class="text-sm leading-6 text-slate-200">
-                                        充值过程建议由用户本人操作，不向陌生人泄露账号密码。遇到订单、卡密、页面报错等问题，可保留截图联系微信客服处理。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 grid gap-3 text-sm sm:grid-cols-3">
-                        <div class="rounded-lg bg-slate-50 p-4">
-                            <div class="text-slate-500">适用账号</div>
-                            <div class="mt-1 font-black">未开通或已到期</div>
-                        </div>
-                        <div class="rounded-lg bg-slate-50 p-4">
-                            <div class="text-slate-500">支付方式</div>
-                            <div class="mt-1 font-black">微信 / 支付宝</div>
-                        </div>
-                        <div class="rounded-lg bg-slate-50 p-4">
-                            <div class="text-slate-500">售后凭证</div>
-                            <div class="mt-1 font-black">订单号 + 截图</div>
-                        </div>
-                    </div>
-                </div>
+            <p class="mt-5 text-sm text-slate-500">价格与库存以发卡页面实时信息为准</p>
+        </div>
+        <div class="border-t border-[#d9e4e1] bg-white/60">
+            <div class="mx-auto grid max-w-6xl px-4 sm:grid-cols-3 lg:px-8">
+                <div class="hero-step py-5 sm:pr-7"><span class="mr-3 font-extrabold text-brand-600">01</span><span class="font-semibold">选套餐，购买卡密</span></div>
+                <div class="hero-step py-5 sm:px-7"><span class="mr-3 font-extrabold text-brand-600">02</span><span class="font-semibold">自助充值</span></div>
+                <div class="hero-step py-5 sm:pl-7"><span class="mr-3 font-extrabold text-brand-600">03</span><span class="font-semibold">确认会员状态</span></div>
             </div>
         </div>
     </section>
 
-    <section class="bg-white py-6">
-        <div class="mx-auto grid max-w-7xl gap-3 px-4 text-sm font-semibold text-slate-600 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> ChatGPT Plus 充值代充</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> GPT 会员升级教程</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> 自助卡密购买兑换</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> 订单异常售后协助</div>
-        </div>
-    </section>
-
-    <section id="plans" class="anchor-offset bg-slate-50 py-20">
-        <div class="mx-auto max-w-7xl px-4 lg:px-8">
-            <div class="max-w-3xl">
-                <p class="font-black uppercase tracking-wide text-brand-600">Plans</p>
-                <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">按需选择 ChatGPT Plus 充值方案</h2>
-                <p class="mt-4 text-lg leading-8 text-slate-600">价格、库存和活动以发卡页面实时显示为准。这里展示的是常见购买场景，方便搜索用户快速判断是否适合自己。</p>
-            </div>
-            <div class="mt-10 grid gap-5 lg:grid-cols-3">
-                <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-xl font-black">Plus 月度充值</h3>
-                        <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-black text-brand-700">推荐</span>
-                    </div>
-                    <p class="mt-4 text-slate-600">适合首次升级、短期办公、论文写作、代码辅助和日常 AI 工具使用。</p>
-                    <ul class="mt-6 space-y-3 text-sm text-slate-600">
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>自助购买卡密</li>
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>按教程完成充值</li>
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>异常订单客服协助</li>
-                    </ul>
-                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="mt-7 inline-flex w-full items-center justify-center rounded-lg bg-brand-600 px-4 py-3 font-black text-white hover:bg-brand-700">查看实时价格</a>
+    <section id="plans" class="anchor-offset bg-white py-16 md:py-24">
+        <div class="mx-auto max-w-6xl px-4 lg:px-8">
+            <p class="section-kicker">充值套餐</p>
+            <h2 class="section-heading mt-3 text-3xl font-bold text-slate-950 md:text-4xl">选择你的 ChatGPT 套餐</h2>
+            <p class="mt-4 max-w-2xl leading-8 text-slate-600">Plus、Pro 5x、Pro 20x 均支持卡密充值。进入发卡页后选择对应商品，查看价格、库存和适用条件。</p>
+            <div class="mt-9 grid gap-5 md:grid-cols-3">
+                <article class="min-w-0 rounded-lg border border-slate-200 p-6">
+                    <p class="text-sm text-slate-500">ChatGPT</p>
+                    <h3 class="mt-2 text-3xl font-bold text-slate-950">Plus</h3>
+                    <p class="mt-3 text-slate-600">Plus 套餐充值卡密</p>
+                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" aria-label="查看 ChatGPT Plus 套餐价格与说明" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">查看价格与说明 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
                 </article>
-                <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
-                    <h3 class="text-xl font-black">GPT 账号升级协助</h3>
-                    <p class="mt-4 text-slate-600">适合遇到支付失败、页面跳转异常、网络环境不稳定或不熟悉充值流程的用户。</p>
-                    <ul class="mt-6 space-y-3 text-sm text-slate-600">
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>充值步骤指引</li>
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>失败原因排查</li>
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>售后处理建议</li>
-                    </ul>
-                    <a href="#contact" class="mt-7 inline-flex w-full items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-3 font-black text-slate-950 hover:border-brand-600 hover:text-brand-700">咨询客服</a>
+                <article class="min-w-0 rounded-lg border border-slate-200 p-6">
+                    <p class="text-sm text-slate-500">ChatGPT</p>
+                    <h3 class="mt-2 text-3xl font-bold text-slate-950">Pro 5x</h3>
+                    <p class="mt-3 text-slate-600">Pro 5x 套餐充值卡密</p>
+                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" aria-label="查看 ChatGPT Pro 5x 套餐价格与说明" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">查看价格与说明 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
                 </article>
-                <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
-                    <h3 class="text-xl font-black">团队与长期使用</h3>
-                    <p class="mt-4 text-slate-600">适合需要长期使用 ChatGPT Plus 的创作者、开发者、跨境从业者和小团队。</p>
-                    <ul class="mt-6 space-y-3 text-sm text-slate-600">
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>多次购买订单管理</li>
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>提醒续费注意事项</li>
-                        <li><i class="fa-solid fa-circle-check mr-2 text-brand-600"></i>长期售后沟通入口</li>
-                    </ul>
-                    <a href="#faq" class="mt-7 inline-flex w-full items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-3 font-black text-slate-950 hover:border-brand-600 hover:text-brand-700">先看常见问题</a>
+                <article class="min-w-0 rounded-lg border border-slate-200 p-6">
+                    <p class="text-sm text-slate-500">ChatGPT</p>
+                    <h3 class="mt-2 text-3xl font-bold text-slate-950">Pro 20x</h3>
+                    <p class="mt-3 text-slate-600">Pro 20x 套餐充值卡密</p>
+                    <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" aria-label="查看 ChatGPT Pro 20x 套餐价格与说明" class="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-brand-600 px-4 text-sm font-bold text-white hover:bg-brand-700">查看价格与说明 <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
                 </article>
             </div>
+            <p class="mt-6 text-sm leading-7 text-slate-500">已有会员或不确定账号是否适用？<a href="#contact" class="font-semibold text-brand-700 underline underline-offset-4">购买前咨询客服</a>。</p>
         </div>
     </section>
 
@@ -390,29 +310,29 @@
             <div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr]">
                 <div>
                     <p class="font-black uppercase tracking-wide text-brand-600">Why ChatGPT TopUp</p>
-                    <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">一个更完整的 GPT 代充服务页面，应该让用户先放心</h2>
-                    <p class="mt-5 text-lg leading-8 text-slate-600">市面上的 ChatGPT 代充站点，用户最关心的不是“能不能买”，而是流程是否清楚、是否需要密码、失败怎么办、售后有没有人接。本站把这些问题放在购买前讲明白。</p>
+                    <h2 class="mt-3 text-3xl font-bold text-slate-950 md:text-4xl">从选套餐到充值完成，都有指引</h2>
+                    <p class="mt-5 leading-8 text-slate-600">三种套餐都提供操作指引和订单协助。你可以先了解流程、咨询账号是否适用，再选择需要的充值服务。</p>
                 </div>
                 <div class="grid gap-4 sm:grid-cols-2">
                     <div class="rounded-2xl border border-slate-200 p-6">
                         <i class="fa-solid fa-credit-card text-2xl text-brand-600"></i>
                         <h3 class="mt-4 text-lg font-black">无需海外信用卡</h3>
-                        <p class="mt-2 leading-7 text-slate-600">通过卡密购买与自助充值流程，降低海外支付门槛。</p>
+                        <p class="mt-2 leading-7 text-slate-600">通过发卡页购买套餐卡密，支付方式以结算页面为准。</p>
                     </div>
                     <div class="rounded-2xl border border-slate-200 p-6">
                         <i class="fa-solid fa-user-shield text-2xl text-brand-600"></i>
-                        <h3 class="mt-4 text-lg font-black">账号隐私优先</h3>
-                        <p class="mt-2 leading-7 text-slate-600">建议用户本人操作，不向任何人直接提供 ChatGPT 密码。</p>
+                        <h3 class="mt-4 text-lg font-black">自己的账号，自己操作</h3>
+                        <p class="mt-2 leading-7 text-slate-600">自行登录需要充值的账号，无需把账号密码发送给客服。</p>
                     </div>
                     <div class="rounded-2xl border border-slate-200 p-6">
                         <i class="fa-solid fa-video text-2xl text-brand-600"></i>
-                        <h3 class="mt-4 text-lg font-black">视频教程可跟做</h3>
-                        <p class="mt-2 leading-7 text-slate-600">第一次充值也能按页面和视频逐步完成，减少误操作。</p>
+                        <h3 class="mt-4 text-lg font-black">中文教程，步骤清楚</h3>
+                        <p class="mt-2 leading-7 text-slate-600">先用视频熟悉操作，再按所购套餐的实际指引完成充值。</p>
                     </div>
                     <div class="rounded-2xl border border-slate-200 p-6">
                         <i class="fa-solid fa-receipt text-2xl text-brand-600"></i>
-                        <h3 class="mt-4 text-lg font-black">订单售后有凭证</h3>
-                        <p class="mt-2 leading-7 text-slate-600">保留订单号、卡密和报错截图，客服可更快定位问题。</p>
+                        <h3 class="mt-4 text-lg font-black">订单问题，客服协助</h3>
+                        <p class="mt-2 leading-7 text-slate-600">遇到卡密或充值异常，提供订单号和截图即可联系售后排查。</p>
                     </div>
                 </div>
             </div>
@@ -423,36 +343,36 @@
         <div class="mx-auto max-w-7xl px-4 lg:px-8">
             <div class="max-w-3xl">
                 <p class="font-black uppercase tracking-wide text-emerald-300">How it works</p>
-                <h2 class="mt-3 text-3xl font-black tracking-normal md:text-4xl">ChatGPT Plus 自助充值流程</h2>
-                <p class="mt-4 text-lg leading-8 text-slate-300">建议先确认自己的账号可正常登录 ChatGPT，再购买卡密并进入充值中心操作。</p>
+                <h2 class="mt-3 text-3xl font-black tracking-normal md:text-4xl">四步完成 ChatGPT 套餐充值</h2>
+                <p class="mt-4 text-lg leading-8 text-slate-300">Plus、Pro 5x、Pro 20x 从这里开始。先选套餐，再使用对应卡密，具体操作以订单和充值页面指引为准。</p>
             </div>
             <div class="mt-10 grid gap-5 md:grid-cols-4">
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
                     <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-400 text-slate-950 font-black">1</div>
-                    <h3 class="mt-5 text-lg font-black">购买卡密</h3>
-                    <p class="mt-2 leading-7 text-slate-300">进入发卡页面，选择 ChatGPT Plus 充值卡密并完成支付。</p>
+                    <h3 class="mt-5 text-lg font-black">选择套餐并购买</h3>
+                    <p class="mt-2 leading-7 text-slate-300">选择 Plus、Pro 5x 或 Pro 20x，核对商品说明后购买对应卡密。</p>
                     <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="mt-4 inline-block font-bold text-emerald-300">去购买</a>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
                     <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-400 text-slate-950 font-black">2</div>
-                    <h3 class="mt-5 text-lg font-black">打开充值中心</h3>
-                    <p class="mt-2 leading-7 text-slate-300">复制订单中的卡密，进入充值中心并按页面提示填写。</p>
+                    <h3 class="mt-5 text-lg font-black">进入充值中心</h3>
+                    <p class="mt-2 leading-7 text-slate-300">从订单中复制卡密，进入充值中心，按提示填写并核对套餐。</p>
                     <a id="rechargeLinkStep" href="#" target="_blank" rel="nofollow noopener" class="mt-4 inline-block font-bold text-emerald-300">去充值</a>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
                     <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-400 text-slate-950 font-black">3</div>
-                    <h3 class="mt-5 text-lg font-black">登录验证</h3>
-                    <p class="mt-2 leading-7 text-slate-300">由用户本人登录自己的 ChatGPT 账号，完成页面要求的验证。</p>
+                    <h3 class="mt-5 text-lg font-black">登录并完成验证</h3>
+                    <p class="mt-2 leading-7 text-slate-300">自行登录需要充值的 ChatGPT 账号，按所购套餐的指引完成操作。</p>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
                     <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-400 text-slate-950 font-black">4</div>
-                    <h3 class="mt-5 text-lg font-black">确认到账</h3>
-                    <p class="mt-2 leading-7 text-slate-300">充值完成后回到 ChatGPT 检查 Plus 状态，异常则联系售后。</p>
+                    <h3 class="mt-5 text-lg font-black">确认充值结果</h3>
+                    <p class="mt-2 leading-7 text-slate-300">回到 ChatGPT 查看会员状态，确认与所购套餐一致，并保留订单凭证。</p>
                 </div>
             </div>
             <div class="mt-8 rounded-2xl border border-amber-300/30 bg-amber-300/10 p-5 text-amber-100">
-                <h3 class="font-black"><i class="fa-solid fa-triangle-exclamation mr-2"></i>充值前请确认</h3>
-                <p class="mt-2 leading-7">通常建议用于未开通 Plus 或 Plus 已到期账号。若账号地区、支付风控、网络环境或 OpenAI 页面状态异常，可能影响充值流程，请先保存截图再联系客服。</p>
+                <h3 class="font-black"><i class="fa-solid fa-triangle-exclamation mr-2"></i>已有会员？先确认账号是否适用</h3>
+                <p class="mt-2 leading-7">不同套餐的账号要求可能不同。请先阅读对应商品说明；当前会员尚未到期或希望更换套餐时，购买前可联系客服确认。</p>
             </div>
         </div>
     </section>
@@ -460,8 +380,8 @@
     <section id="video" class="anchor-offset bg-white py-20">
         <div class="mx-auto max-w-5xl px-4 text-center lg:px-8">
             <p class="font-black uppercase tracking-wide text-brand-600">Tutorial</p>
-            <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">视频教程：跟着操作完成 GPT 充值</h2>
-            <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">不熟悉流程的用户，建议先看一遍教程，再打开充值中心操作。</p>
+            <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">先看教程，再开始充值</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">视频展示卡密充值的基本操作。Plus、Pro 5x、Pro 20x 的具体步骤，请结合对应套餐说明查看。</p>
             <div class="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 p-3 shadow-soft">
                 <div class="relative aspect-video overflow-hidden rounded-xl bg-black">
                     <video id="tutorialVideo" class="h-full w-full object-contain" poster="https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WechatIMG1540.jpg" preload="metadata">
@@ -478,13 +398,13 @@
         </div>
     </section>
 
-    <section id="reviews" class="anchor-offset overflow-hidden bg-slate-50 py-20">
+    <section id="reviews" class="anchor-offset overflow-hidden bg-[#f4f8f7] py-20">
         <div class="mx-auto max-w-7xl px-4 lg:px-8">
             <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                 <div class="max-w-3xl">
                     <p class="font-black uppercase tracking-wide text-brand-600">Reviews</p>
-                    <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">用户真实反馈</h2>
-                    <p class="mt-4 text-lg leading-8 text-slate-600">来自真实下单用户的充值体验，包含自助升级、到账速度、客服协助和使用感受。</p>
+                    <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">用户充值反馈</h2>
+                    <p class="mt-4 text-lg leading-8 text-slate-600">看看用户对充值操作、到账体验和客服协助的留言。</p>
                 </div>
                 <a href="https://ja2t57ja0d.feishu.cn/wiki/KipEwMw3AidnexkCu9dch3Kznjb" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-black text-slate-950 shadow-line transition hover:border-brand-600 hover:text-brand-700">
                     查看更多留言
@@ -655,40 +575,18 @@
         </div>
     </section>
 
-    <section class="bg-white py-20">
-        <div class="mx-auto max-w-7xl px-4 lg:px-8">
-            <div class="grid gap-8 lg:grid-cols-[.95fr_1.05fr]">
-                <div>
-                    <p class="font-black uppercase tracking-wide text-brand-600">Comparison</p>
-                    <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">ChatGPT Plus 代充适合哪些用户？</h2>
-                    <p class="mt-5 text-lg leading-8 text-slate-600">如果你已经有稳定海外支付方式，可以直接使用官方订阅；如果遇到支付门槛或流程问题，代充卡密会更省事。</p>
+    <section class="border-t border-slate-100 bg-white py-16 md:py-20">
+        <div class="mx-auto max-w-6xl px-4 lg:px-8">
+            <p class="section-kicker">如何选择</p>
+            <h2 class="section-heading mt-3 text-3xl font-bold text-slate-950 md:text-4xl">选择适合自己的充值方式</h2>
+            <div class="mt-9 grid gap-8 md:grid-cols-2 md:gap-14">
+                <div class="border-t-2 border-slate-300 pt-5">
+                    <h3 class="text-lg font-bold">直接通过官方订阅</h3>
+                    <p class="mt-3 leading-8 text-slate-600">已有可用的海外支付方式，可以前往 ChatGPT 官方页面选择套餐，按官方流程完成支付。</p>
                 </div>
-                <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-line">
-                    <div class="grid grid-cols-3 bg-slate-950 text-sm font-black text-white">
-                        <div class="p-4">使用场景</div>
-                        <div class="p-4">官方订阅</div>
-                        <div class="p-4">本站卡密充值</div>
-                    </div>
-                    <div class="grid grid-cols-3 border-t border-slate-200 text-sm">
-                        <div class="p-4 font-bold">没有海外信用卡</div>
-                        <div class="p-4 text-slate-500">可能受限</div>
-                        <div class="p-4 text-brand-700 font-bold">更方便</div>
-                    </div>
-                    <div class="grid grid-cols-3 border-t border-slate-200 text-sm">
-                        <div class="p-4 font-bold">不熟悉升级流程</div>
-                        <div class="p-4 text-slate-500">自行摸索</div>
-                        <div class="p-4 text-brand-700 font-bold">教程 + 客服</div>
-                    </div>
-                    <div class="grid grid-cols-3 border-t border-slate-200 text-sm">
-                        <div class="p-4 font-bold">支付失败排查</div>
-                        <div class="p-4 text-slate-500">自行处理</div>
-                        <div class="p-4 text-brand-700 font-bold">订单协助</div>
-                    </div>
-                    <div class="grid grid-cols-3 border-t border-slate-200 text-sm">
-                        <div class="p-4 font-bold">追求官方直连</div>
-                        <div class="p-4 text-brand-700 font-bold">优先选择</div>
-                        <div class="p-4 text-slate-500">独立服务</div>
-                    </div>
+                <div class="border-t-2 border-brand-600 pt-5">
+                    <h3 class="text-lg font-bold">使用本站卡密充值</h3>
+                    <p class="mt-3 leading-8 text-slate-600">希望通过卡密充值，可以在本站查看 Plus、Pro 5x、Pro 20x 三种套餐入口，并获得中文教程和订单协助。</p>
                 </div>
             </div>
         </div>
@@ -698,51 +596,65 @@
         <div class="mx-auto max-w-4xl px-4 lg:px-8">
             <div class="text-center">
                 <p class="font-black uppercase tracking-wide text-brand-600">FAQ</p>
-                <h2 class="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">ChatGPT Plus 充值代充常见问题</h2>
-                <p class="mt-4 text-lg leading-8 text-slate-600">这些内容既方便用户购买前判断，也覆盖搜索引擎常见长尾问题。</p>
+                <h2 class="mt-3 text-3xl font-bold text-slate-950 md:text-4xl"><span class="mb-3 block text-lg leading-8 md:text-2xl">ChatGPT Plus、<span class="whitespace-nowrap">Pro 5x</span>、<span class="whitespace-nowrap">Pro 20x</span></span>充值代充常见问题</h2>
+                <p class="mt-4 leading-8 text-slate-600">选套餐、确认账号、查看充值结果，购买前先把这些问题了解清楚。</p>
             </div>
             <div class="mt-10 space-y-4">
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line" open>
                     <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
-                        没有海外信用卡可以充值 ChatGPT Plus 吗？
+                        支持哪些 ChatGPT 充值套餐？
                         <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
                     </summary>
-                    <p class="mt-4 leading-8 text-slate-600">可以。你可以在发卡页面使用微信或支付宝购买卡密，再进入充值中心按教程完成 ChatGPT Plus 会员升级。</p>
+                    <p class="mt-4 leading-8 text-slate-600">支持 ChatGPT Plus、Pro 5x、Pro 20x 三种套餐。进入发卡页后选择对应商品，查看价格、库存和适用条件，再购买充值卡密。</p>
+                </details>
+                <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
+                    <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
+                        Plus、Pro 5x 和 Pro 20x 怎么选？
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-4 leading-8 text-slate-600">按使用需求和预算选择，并核对商品介绍中的套餐内容、充值时长和账号要求。如果已经开通会员，或希望更换套餐，购买前请先联系客服确认是否适用。</p>
+                </details>
+                <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
+                    <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
+                        没有海外信用卡，也能购买充值卡密吗？
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-4 leading-8 text-slate-600">可以通过发卡页提供的支付方式购买对应套餐卡密，无需自行绑定海外信用卡。具体支付方式以结算页面为准。</p>
                 </details>
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
                     <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
                         充值需要把 ChatGPT 账号密码发给客服吗？
                         <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
                     </summary>
-                    <p class="mt-4 leading-8 text-slate-600">不建议向任何人提供账号密码。本站主流程是用户本人自助操作，客服主要负责订单、卡密、错误截图和流程问题的排查。</p>
+                    <p class="mt-4 leading-8 text-slate-600">请自行登录和操作账号，不要把密码发给客服。客服可以根据订单号和报错截图协助排查充值问题。</p>
                 </details>
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
                     <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
-                        ChatGPT Plus 充值多久能到账？
+                        Plus、Pro 5x、Pro 20x 充值多久生效？
                         <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
                     </summary>
-                    <p class="mt-4 leading-8 text-slate-600">顺利情况下按教程操作后很快可以完成。实际到账时间会受账号状态、网络环境、OpenAI 页面状态和支付通道影响。</p>
+                    <p class="mt-4 leading-8 text-slate-600">以所购套餐说明和充值页面结果为准。账号状态、网络和充值通道可能影响处理时间，完成后请在自己的 ChatGPT 账号内确认会员状态。</p>
                 </details>
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
                     <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
-                        为什么提示充值失败或页面打不开？
+                        卡密无法使用或充值报错怎么办？
                         <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
                     </summary>
-                    <p class="mt-4 leading-8 text-slate-600">常见原因包括网络节点不稳定、账号地区异常、浏览器缓存、OpenAI 页面临时风控或卡密填写错误。建议更换浏览器、清理缓存、截图报错并联系售后。</p>
+                    <p class="mt-4 leading-8 text-slate-600">先核对卡密是否完整、所选套餐是否与订单一致，并确认账号可以正常登录。仍未解决时，请保留订单号与报错截图联系微信客服。</p>
                 </details>
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
                     <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
                         充值失败可以退款吗？
                         <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
                     </summary>
-                    <p class="mt-4 leading-8 text-slate-600">请保留订单号、卡密和错误截图联系微信客服。经核实无法处理的订单，会按照售后规则协助补充或退款。</p>
+                    <p class="mt-4 leading-8 text-slate-600">请保留订单号和报错截图联系微信客服。客服核实卡密使用情况及失败原因后，按对应商品的售后规则处理。</p>
                 </details>
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-line">
                     <summary class="flex cursor-pointer items-center justify-between gap-5 text-left text-lg font-black">
-                        ChatGPT Plus 代充和共享账号有什么区别？
+                        充值到自己的账号，还是提供共享账号？
                         <i class="fa-solid fa-chevron-down text-brand-600 transition group-open:rotate-180"></i>
                     </summary>
-                    <p class="mt-4 leading-8 text-slate-600">本站强调给用户自己的账号升级 Plus，不提供多人共用共享账号。自己的账号更适合长期使用、保存历史记录和保护个人数据。</p>
+                    <p class="mt-4 leading-8 text-slate-600">充值面向你自己的 ChatGPT 账号，Plus、Pro 5x 和 Pro 20x 均按所选商品办理。本站不提供多人共用的共享账号。</p>
                 </details>
             </div>
         </div>
@@ -752,25 +664,8 @@
         <div class="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
             <div>
                 <p class="font-black uppercase tracking-wide text-emerald-300">Support</p>
-                <h2 class="mt-3 text-3xl font-black tracking-normal md:text-4xl">购买前不确定？充值后遇到问题？直接联系微信客服</h2>
-                <p class="mt-5 text-lg leading-8 text-slate-300">为了更快处理，请发送订单号、卡密后四位、报错截图和你的操作步骤。客服会根据实际情况协助排查。</p>
-                <div class="mt-8 grid gap-4 sm:grid-cols-3">
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <i class="fa-solid fa-clock text-emerald-300"></i>
-                        <div class="mt-3 font-black">响应售后</div>
-                        <div class="mt-1 text-sm text-slate-400">订单问题优先</div>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <i class="fa-solid fa-file-shield text-emerald-300"></i>
-                        <div class="mt-3 font-black">保留凭证</div>
-                        <div class="mt-1 text-sm text-slate-400">订单号与截图</div>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <i class="fa-solid fa-rotate-left text-emerald-300"></i>
-                        <div class="mt-3 font-black">异常处理</div>
-                        <div class="mt-1 text-sm text-slate-400">补充或退款</div>
-                    </div>
-                </div>
+                <h2 class="mt-3 text-3xl font-bold md:text-4xl">套餐选择与充值问题，都可以咨询</h2>
+                <p class="mt-5 max-w-xl leading-8 text-slate-300">购买前，告诉客服你想选的套餐和当前会员状态。购买后，提供订单号、卡密后四位及报错截图，方便定位问题。</p>
             </div>
             <div class="rounded-2xl border border-white/10 bg-white p-6 text-slate-950 shadow-soft">
                 <div class="rounded-xl bg-slate-50 p-5">
@@ -782,7 +677,7 @@
                     <p id="copyTip" class="mt-2 text-sm text-slate-500">添加时备注：gpt</p>
                 </div>
                 <div class="mt-5 flex flex-col items-center rounded-xl border border-slate-200 bg-white p-5">
-                    <img src="https://hlplch.aliyuntm.com/chatgpt/WX20240227-105234.png" alt="ChatGPT TopUp ChatGPT Plus 充值客服微信二维码" class="block h-auto w-full max-w-[260px] rounded-lg object-contain" width="378" height="440" loading="eager" decoding="async">
+                    <img src="https://hlplch.aliyuntm.com/chatgpt/WX20240227-105234.png" onerror="this.onerror=null;this.src='https://lch-hlp.oss-cn-shanghai.aliyuncs.com/chatgpt/WX20240227-105234.png'" alt="ChatGPT TopUp Plus、Pro 5x、Pro 20x 充值客服微信二维码" class="block h-auto w-full max-w-[260px] object-contain" width="378" height="440" loading="eager" decoding="async">
                     <div class="mt-3 text-sm font-bold text-slate-600">扫码添加客服微信</div>
                 </div>
                 <a href="https://fe.dtyuedan.cn/shop/codes" target="_blank" rel="nofollow noopener" class="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-brand-600 px-4 py-3 font-black text-white hover:bg-brand-700">
@@ -797,7 +692,7 @@
     <div class="mx-auto flex max-w-7xl flex-col gap-5 px-4 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
         <div>
             <div class="text-lg font-black text-slate-950">ChatGPT TopUp</div>
-            <p class="mt-1">ChatGPT Plus 充值代充、自助卡密充值与 GPT 会员升级服务。</p>
+            <p class="mt-1">ChatGPT Plus、Pro 5x、Pro 20x 充值代充与自助卡密服务。</p>
         </div>
         <div class="md:text-right">
             <p>&copy; 2026 ChatGPT TopUp. All rights reserved.</p>
@@ -859,6 +754,12 @@
             } catch (error) {
                 copyTip.textContent = '微信号：lchhlp';
             }
+        });
+    }
+    const mobileMenu = document.querySelector('nav details');
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => { mobileMenu.open = false; });
         });
     }
 </script>
